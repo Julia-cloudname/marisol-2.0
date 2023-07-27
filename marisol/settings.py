@@ -33,7 +33,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['8000-juliacloudname-marisol-j1f97fwdoop.ws-eu102.gitpod.io', 'marisol-801c526b3523.herokuapp.com']
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,12 +41,22 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_summernote',
     'blog',
 ]
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
