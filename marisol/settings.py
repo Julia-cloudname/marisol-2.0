@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-juliacloudname-marisol-j1f97fwdoop.ws-eu102.gitpod.io', 'marisol-801c526b3523.herokuapp.com']
+ALLOWED_HOSTS = ['8000-juliacloudname-marisol-j1f97fwdoop.ws-eu102.gitpod.io', 'marisol-801c526b3523.herokuapp.com', '8000-juliacloudname-marisol-j1f97fwdoop.ws-eu102.gitpod.io/booking']
 
 # Application definition
 

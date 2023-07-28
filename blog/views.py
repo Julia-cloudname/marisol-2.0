@@ -29,3 +29,13 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
+
+class BookingView(View):
+    def get(self, request, *args, **kwargs):
+        # Booking view logic 
+        return render(
+            request,
+            "booking.html",
+        )
+
