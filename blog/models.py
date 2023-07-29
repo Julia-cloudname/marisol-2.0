@@ -45,3 +45,19 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
+
+
+class CallBooking(models.Model):
+    client_name = models.CharField(max_length=100)
+    client_email = models.EmailField()
+    phone_number = models.CharField(max_length=20)
+    details = models.TextField(blank=True)
+    call_date = models.DateField()
+    call_time = models.TimeField()
+    enabled_dates = models.DateField()   
+    disabled_dates = models.DateField()   
+    enable_time = models.TimeField()   
+    disable_time = models.TimeField()  
+
+    def __str__(self):
+        return f"Call Booking by {self.client_name}"

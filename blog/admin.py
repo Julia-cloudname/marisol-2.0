@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post, Comment
+from .models import Post, Comment, CallBooking
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -22,3 +22,10 @@ class CommentAdmin(admin.ModelAdmin):
 
     def approve_comments(self, request, queryset):
         queryset.update(approved=True)
+
+@admin.register(CallBooking)
+class CallBookingAdmin(admin.ModelAdmin):
+    list_display = ('client_name', 'client_email', 'phone_number', 'call_date', 'call_time')
+    list_filter = ('call_date', 'call_time')
+    search_fields = ('client_name', 'client_email', 'phone_number')
+    date_hierarchy = 'call_date'
