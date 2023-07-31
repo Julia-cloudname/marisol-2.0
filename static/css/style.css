@@ -1,39 +1,72 @@
-#layout {
-    width: 100%;
-    overflow: hidden;
+/* Add the following CSS rules */
+
+/* Main layout container */
+.layout {
+    visibility: inherit;
+    color: #edf5fd;
+}
+
+.h1, h1 {
+    font-size: 38px;
+}
+
+.wrapper {
+    background-image: url(/static/images/room-2.jpeg);
+    background-attachment: scroll;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 90%;
+    justify-content: center;
     position: relative;
 }
 
-#cover-text, #cover-text h2 {
-    color: #FAECEC;
-}
-
-.main-image {
+.wrapper .container_description {
+    background: rgb(90 90 90 / 75%);
+    padding: 1.8rem 0;
     text-align: center;
+    width: 80%;
+    height: 40%;
+    margin-top: 15%;
+    margin-bottom: 10%;
+}
 
- /* animates zoom effect on loading page */
-    animation-name: hero-zoom;
-    animation-duration: 5s;
-    animation-fill-mode: forwards;
+/* Style the "Book call" button */
+.book-call-button {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    background-color: #6ca159;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
 }
-.main-image img {
-    max-width: 100%;   
+
+/* Add a hover effect for the button */
+.book-call-button:hover {
+    background-color: #578d48;
 }
+
 
 #cover-text {
     font-size: 150%;
     font-family: Berkshire Swash, serif;
     text-transform: none;
     letter-spacing: 0.2px;
-    width: 560px;
-    height: 180px;
-    padding-top: 117px;
-    padding-left: 20px;
-    padding-right: 20px;
     text-align: center;
-    background-color: rgba(108,161,89, 0.8);
-    bottom: 6%;
-    right: 325px;
-    position: absolute;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+main,
+footer {
+    padding: 20px;
+}
