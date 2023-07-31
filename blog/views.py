@@ -96,7 +96,10 @@ class BookingView(View):
     def post(self, request, *args, **kwargs):
         booking_form = CallBookingForm(data=request.POST)
         if booking_form.is_valid():
-            booking_form.save()
+            call_time = request.POST['call_time']  
+            booking = booking_form.save(commit=False)  
+            booking.call_time = call_time 
+            booking.save()  
             return redirect(reverse('success_page'))  
 
         available_time_slots = [
