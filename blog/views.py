@@ -97,10 +97,10 @@ class BookingView(View):
         booking_form = CallBookingForm(data=request.POST)
         if booking_form.is_valid():
             booking_form.save()
-            return redirect(reverse('success_page'))
+            return redirect(reverse('success_page'))  
 
         available_time_slots = [
-             ('09:00', '10:00 AM'),
+            ('09:00', '10:00 AM'),
             ('10:00', '11:00 AM'),
             ('11:00', '12:00 AM'),
             ('12:00', '1:00 PM'),
@@ -122,5 +122,9 @@ class BookingView(View):
             },
         )
 
+    
+class SuccessView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'success_page.html')
 
 
