@@ -14,7 +14,7 @@ class TimeInput(forms.TimeInput):
 class CallBookingForm(forms.ModelForm):
     class Meta:
         model = CallBooking
-        fields = ['client_name', 'client_email', 'phone_number', 'details', 'call_date']
+        fields = ['client_name', 'client_email', 'phone_number', 'details', 'call_date', 'call_time']
         widgets = {
             'call_date': DateInput(),
             'call_time': TimeInput(),
@@ -23,9 +23,7 @@ class CallBookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.initial['call_date'] = datetime.date.today()
-
-    def set_time_choices(self, choices):
-        self.fields['call_time'].widget.choices = choices
+        self.fields['call_time'].required = True 
 
 
 class CommentForm(forms.ModelForm):

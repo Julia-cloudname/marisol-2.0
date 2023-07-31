@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h1>Call Booking Successful!</h1>
+            <p>Thank you for booking a call with us. We have received your request and will contact you at the scheduled time.</p>
+            <p>If you have any questions or need to reschedule, please contact our support team at support@example.com.</p>
+            <a href="{% url 'home' %}" class="btn btn-primary">Go Back to Home</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

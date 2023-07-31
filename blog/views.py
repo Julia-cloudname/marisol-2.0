@@ -3,6 +3,7 @@ from django.views import generic, View
 from .models import Post, CallBooking
 from .forms import CallBookingForm, CommentForm
 import datetime
+from django.urls import reverse
 
 
 class PostList(generic.ListView):
@@ -96,7 +97,7 @@ class BookingView(View):
         booking_form = CallBookingForm(data=request.POST)
         if booking_form.is_valid():
             booking_form.save()
-            return redirect('home')
+            return redirect(reverse('success_page'))
 
         available_time_slots = [
              ('09:00', '10:00 AM'),
