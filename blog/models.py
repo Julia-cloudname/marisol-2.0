@@ -4,7 +4,8 @@ from cloudinary.models import CloudinaryField
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
-
+BOOKING_DAY_STATUS = ((0, "Enable"), (1, "Disable"))
+BOOKING_TIME_STATUS = ((0, "Enable"), (1, "Disable"))
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -48,16 +49,26 @@ class Comment(models.Model):
 
 
 class CallBooking(models.Model):
-    client_name = models.CharField(max_length=100)
-    client_email = models.EmailField()
-    phone_number = models.CharField(max_length=20)
+    client_name = models.CharField(max_length=50, null=False, blank=False)
+    client_email = models.EmailField(null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
     details = models.TextField(blank=True)
-    call_date = models.DateField()
-    call_time = models.TimeField()
-    enabled_dates = models.DateField()   
-    disabled_dates = models.DateField()   
-    enable_time = models.TimeField()   
-    disable_time = models.TimeField()  
+    call_date = models.DateField(null=False, blank=False)
+    call_time = models.TimeField(null=False, blank=False)
+    day_status_evalible = models.IntegerField(choices=BOOKING_DAY_STATUS, default=0)
+    time_status_evalible = models.IntegerField(choices=BOOKING_TIME_STATUS, default=0)
+    booked_time_slots = models.CharField(max_length=255, blank=True)
+    
+    def get_client_name(self):
+        return self.client_name
 
-    def __str__(self):
-        return f"Call Booking by {self.client_name}"
+    def get_client_email(self):
+        return self.client_email
+
+    def get_phone_number(self):
+        return self.phone_number
+
+    def call_data(self):
+        return f" {self.call_date} at {self.call_time}"
+
+ 
