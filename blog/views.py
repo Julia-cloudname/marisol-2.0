@@ -135,6 +135,6 @@ class SuccessView(View):
 
 class UserProfileView(View):
     def get(self, request, *args, **kwargs):
-        # Retrieve the booked calls for the logged-in user
-        user_bookings = CallBooking.objects.filter(user=request.user)
-        return render(request, 'profile.html', {"user_bookings": user_bookings})
+        # Retrieve the last booking of the current user
+        last_booking = CallBooking.objects.filter(user=request.user).latest('call_date')
+        return render(request, 'profile.html', {'last_booking': last_booking})
