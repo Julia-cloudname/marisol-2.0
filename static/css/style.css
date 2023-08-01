@@ -66,9 +66,10 @@
     gap: 20px;
 }
 
-main,
-footer {
+
+.footer {
     padding: 20px;
+    background-color: rgb(25, 24, 24);
 }
 
 .errorlist li {
