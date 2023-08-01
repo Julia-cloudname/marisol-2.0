@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 from django.views import generic, View
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, CallBooking
 from .forms import CallBookingForm, CommentForm
 import datetime
@@ -96,11 +97,12 @@ class BookingView(View):
     def post(self, request, *args, **kwargs):
         booking_form = CallBookingForm(data=request.POST)
         if booking_form.is_valid():
-            call_time = request.POST['call_time']  
-            booking = booking_form.save(commit=False)  
-            booking.call_time = call_time 
-            booking.save()  
-            return redirect(reverse('success_page'))  
+            call_time = request.POST['call_time']
+            booking = booking_form.save(commit=False)
+            booking.call_time = call_time
+            booking.user = request.user  # Set the user for the CallBooking instance
+            booking.save()
+            return redirect(reverse('success_page')) 
 
         available_time_slots = [
             ('09:00', '10:00 AM'),
@@ -131,3 +133,8 @@ class SuccessView(View):
         return render(request, 'success_page.html')
 
 
+class UserProfileView(View):
+    def get(self, request, *args, **kwargs):
+        # Retrieve the booked calls for the logged-in user
+        user_bookings = CallBooking.objects.filter(user=request.user)
+        return render(request, 'profile.html', {"user_bookings": user_bookings})

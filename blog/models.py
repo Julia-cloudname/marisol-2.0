@@ -5,8 +5,6 @@ import datetime
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
-BOOKING_DAY_STATUS = ((0, "Enable"), (1, "Disable"))
-BOOKING_TIME_STATUS = ((0, "Enable"), (1, "Disable"))
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
@@ -50,15 +48,13 @@ class Comment(models.Model):
 
 
 class CallBooking(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     client_name = models.CharField(max_length=50, null=False, blank=False)
     client_email = models.EmailField(null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
     details = models.TextField(blank=True)
     call_date = models.DateField(null=False, blank=False)
     call_time = models.TimeField(null=True, blank=False)
-    day_status_evalible = models.IntegerField(choices=BOOKING_DAY_STATUS, default=0)
-    time_status_evalible = models.IntegerField(choices=BOOKING_TIME_STATUS, default=0)
-    booked_time_slots = models.CharField(max_length=255, blank=True)
     
     def get_client_name(self):
         return self.client_name
@@ -71,5 +67,3 @@ class CallBooking(models.Model):
 
     def call_data(self):
         return f" {self.call_date} at {self.call_time}"
-
- 
