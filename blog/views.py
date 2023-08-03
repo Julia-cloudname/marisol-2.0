@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, CallBooking
@@ -135,6 +135,9 @@ class SuccessView(View):
 
 class UserProfileView(View):
     def get(self, request, *args, **kwargs):
-        # Retrieve the last booking of the current user
-        last_booking = CallBooking.objects.filter(user=request.user).latest('call_date')
-        return render(request, 'profile.html', {'last_booking': last_booking})
+        try:
+            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+        except CallBooking.DoesNotExist:
+            last_booking = None
+
+        return render(request, 'profile.html', {"last_booking": last_booking})

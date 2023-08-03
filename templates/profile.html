@@ -32,9 +32,8 @@
                                 </div>
                             </div>
                             <div class="card-block">
+                                    {% if last_booking %}
                                 <h6 class= "m-b-10 f-w-600">Last booked call</h6>
-                              
-                                <p class="m-b-20 p-b-5 b-b-default f-w-600">Number #</p>
                                 <div class="col-sm-6">
                                     <p class="m-b-10 f-w-600">Client name</p>
                                     <h6 class="text-muted f-w-400">{{ last_booking.client_name }}</h6>
@@ -48,6 +47,10 @@
                                     <h6 class="text-muted f-w-400">{{ last_booking.call_time }}</h6>
                                     <p class="m-b-10 f-w-600">Details</p>
                                     <h6 class="text-muted f-w-400">{{ last_booking.details }}</h6>
+                                </div>
+                                {% else %}
+                                <h6 class="text-muted f-w-400">You don't have booked calls</h6>
+                                {% endif %}
                                 </div>
                             </div>
                         </div>
