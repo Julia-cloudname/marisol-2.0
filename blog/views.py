@@ -141,3 +141,37 @@ class UserProfileView(View):
             last_booking = None
 
         return render(request, 'profile.html', {"last_booking": last_booking})
+
+
+class ChangeBookingView(View):
+    def get(self, request, *args, **kwargs):
+        try:
+            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+            booking_form = CallBookingForm(instance=last_booking)
+        except CallBooking.DoesNotExist:
+            last_booking = None
+            booking_form = None
+
+        return render(
+            request,
+            "change_booking.html",
+            {"booking_form": booking_form},
+        )
+
+    def post(self, request, *args, **kwargs):
+        try:
+            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+            booking_form = CallBookingForm(request.POST, instance=last_booking)
+        except CallBooking.DoesNotExist:
+            last_booking = None
+            booking_form = None
+
+        if booking_form and booking_form.is_valid():
+            booking_form.save()
+            return redirect(reverse('profile'))
+
+        return render(
+            request,
+            "change_booking.html",
+            {"booking_form": booking_form},
+        )

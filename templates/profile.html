@@ -28,12 +28,12 @@
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Email</p>
                                         <h6 class="text-muted f-w-400">{{ user.email }}</h6>
-                                    </div>     
+                                    </div>
                                 </div>
                             </div>
                             <div class="card-block">
-                                    {% if last_booking %}
-                                <h6 class= "m-b-10 f-w-600">Last booked call</h6>
+                                {% if last_booking %}
+                                <h6 class="m-b-10 f-w-600">Last booked call</h6>
                                 <div class="col-sm-6">
                                     <p class="m-b-10 f-w-600">Client name</p>
                                     <h6 class="text-muted f-w-400">{{ last_booking.client_name }}</h6>
@@ -51,13 +51,14 @@
                                 {% else %}
                                 <h6 class="text-muted f-w-400">You don't have booked calls</h6>
                                 {% endif %}
-                                </div>
-                            </div>
+                            </div>            
                         </div>
                     </div>
+                    <a class="change_booking_button" href="{% url 'change_booking' %}">Change Booking</a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 {% endblock %}
