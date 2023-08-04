@@ -48,6 +48,7 @@ class Comment(models.Model):
 
 
 class CallBooking(models.Model):
+    id = models.AutoField(primary_key=True) 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     client_name = models.CharField(max_length=50, null=False, blank=False)
     client_email = models.EmailField(null=False, blank=False)
@@ -55,7 +56,7 @@ class CallBooking(models.Model):
     details = models.TextField(blank=True)
     call_date = models.DateField(null=False, blank=False)
     call_time = models.TimeField(null=True, blank=False)
-    
+
     def get_client_name(self):
         return self.client_name
 
@@ -66,4 +67,4 @@ class CallBooking(models.Model):
         return self.phone_number
 
     def call_data(self):
-        return f" {self.call_date} at {self.call_time}"
+        return f"{self.call_date} at {self.call_time}"

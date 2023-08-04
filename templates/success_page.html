@@ -6,10 +6,12 @@
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
             <h1>Call Booking Successful!</h1>
-            <p>Thank you for booking a call with us. We have received your request and will contact you at the scheduled time.</p>
-            <p>If you have any questions or need to reschedule, please contact our support team at support@example.com.</p>
+            <p>Thank you for booking a call with us. We have received your request and will contact you at the scheduled
+                time.</p>
+            <p>If you have any questions or need to reschedule, please contact our support team at support@example.com.
+            </p>
+            <a class="change_booking_button" href="{% url 'edit_booking' %}">Edit Booking</a>
         </div>
-        <a href="change_booking"> Change booking</a>
     </div>
 </div>
 {% endblock %}

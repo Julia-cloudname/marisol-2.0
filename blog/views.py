@@ -87,7 +87,7 @@ class BookingView(View):
 
         return render(
             request,
-            "booking.html",
+            "booking/booking.html",
             {
                 "booking_form": booking_form,
                 "available_time_slots": available_time_slots,
@@ -120,7 +120,7 @@ class BookingView(View):
 
         return render(
             request,
-            "booking.html",
+            "booking/booking.html",
             {
                 "booking_form": booking_form,
                 "available_time_slots": available_time_slots,
@@ -143,35 +143,75 @@ class UserProfileView(View):
         return render(request, 'profile.html', {"last_booking": last_booking})
 
 
-class ChangeBookingView(View):
+class EditBookingView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         try:
             last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
             booking_form = CallBookingForm(instance=last_booking)
         except CallBooking.DoesNotExist:
             last_booking = None
-            booking_form = None
+            booking_form = CallBookingForm()
+
+        available_time_slots = [
+            ('09:00', '10:00 AM'),
+            ('10:00', '11:00 AM'),
+            ('11:00', '12:00 AM'),
+            ('12:00', '1:00 PM'),
+            ('01:00', '02:00 PM'),
+            ('02:00', '03:00 PM'),
+            ('03:00', '04:00 PM'),
+            ('04:00', '05:00 PM'),
+            ('05:00', '06:00 PM'),
+            ('06:00', '07:00 PM'),
+            ('07:00', '08:00 PM'),
+        ]
 
         return render(
             request,
-            "change_booking.html",
-            {"booking_form": booking_form},
+            'booking/booking.html',
+            {
+                "last_booking": last_booking,
+                "booking_form": booking_form,
+                "available_time_slots": available_time_slots,
+            }
         )
 
     def post(self, request, *args, **kwargs):
         try:
             last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
-            booking_form = CallBookingForm(request.POST, instance=last_booking)
         except CallBooking.DoesNotExist:
             last_booking = None
-            booking_form = None
 
-        if booking_form and booking_form.is_valid():
-            booking_form.save()
-            return redirect(reverse('profile'))
+        if last_booking:
+            booking_form = CallBookingForm(request.POST, instance=last_booking)
+        else:
+            booking_form = CallBookingForm(request.POST)
 
+        if booking_form.is_valid():
+            booking = booking_form.save(commit=False)
+            booking.user = request.user
+            booking.save()
+            return redirect('success_page')
+        
+        available_time_slots = [
+            ('09:00', '10:00 AM'),
+            ('10:00', '11:00 AM'),
+            ('11:00', '12:00 AM'),
+            ('12:00', '1:00 PM'),
+            ('01:00', '02:00 PM'),
+            ('02:00', '03:00 PM'),
+            ('03:00', '04:00 PM'),
+            ('04:00', '05:00 PM'),
+            ('05:00', '06:00 PM'),
+            ('06:00', '07:00 PM'),
+            ('07:00', '08:00 PM'),
+        ]
         return render(
             request,
-            "change_booking.html",
-            {"booking_form": booking_form},
+            'booking/booking.html',
+            {
+                "last_booking": last_booking,
+                "booking_form": booking_form,
+                "available_time_slots": available_time_slots,
+            }
         )

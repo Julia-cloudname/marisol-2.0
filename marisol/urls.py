@@ -1,33 +1,16 @@
-"""codestar URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path, include
-from blog.views import PostList, PostDetail, BookingView, SuccessView, UserProfileView, ChangeBookingView
+from blog.views import PostList, PostDetail, BookingView, SuccessView, UserProfileView, EditBookingView
 from allauth.account.views import LogoutView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', PostList.as_view(), name='home'),
-    path('blog/<slug:slug>', PostDetail.as_view(), name='post_detail'),
+    path('blog/<slug:slug>/', PostDetail.as_view(), name='post_detail'),
     path('booking/', BookingView.as_view(), name='booking'),
     path('success_page/', SuccessView.as_view(), name='success_page'),
-    path('profile/', UserProfileView.as_view(), name='profile'), 
+    path('profile/', UserProfileView.as_view(), name='profile'),
     path("accounts/", include("allauth.urls")),
     path('accounts/logout/', LogoutView.as_view(), name='account_logout'),
-    path('summernote/', include('django_summernote.urls')),
-    path('change_booking/', ChangeBookingView.as_view(), name='change_booking'),
+    path('edit_booking/', EditBookingView.as_view(), name='edit_booking'),
 ]
-
