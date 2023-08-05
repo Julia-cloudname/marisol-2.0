@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PostList, PostDetail, BookingView, SuccessView, UserProfileView, ChangeBookingView, EditBookingView, DeleteBookingView
+from .views import PostList, PostDetail, BookingView, SuccessView, UserProfileView, ChangeBookingView, EditBookingView, DeleteBookingView, SuccessDeleteView
 
 urlpatterns = [
     path('', PostList.as_view(), name='index'),
@@ -9,4 +9,5 @@ urlpatterns = [
     path('profile/', UserProfileView.as_view(), name='profile'),
     path('edit_booking/', EditBookingView.as_view(), name='edit_booking'),
     path('delete_booking/', DeleteBookingView.as_view(), name='delete_booking'),
+    path('success_delete_page/', SuccessDeleteView.as_view(), name='success_delete_page'),
 ]

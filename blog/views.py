@@ -221,29 +221,35 @@ class EditBookingView(LoginRequiredMixin, View):
         )
 
 class DeleteBookingView(LoginRequiredMixin, View):
-    last_booking = None
-
     def get(self, request, *args, **kwargs):
         try:
-            self.last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+            last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
         except CallBooking.DoesNotExist:
-            self.last_booking = None
+            last_booking = None
 
         return render(
             request,
             'booking/delete_booking.html',
             {
-                "last_booking": self.last_booking,
+                "last_booking": last_booking,
             }
         )
-    
+
     def post(self, request, *args, **kwargs):
+        try:
+            last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
+            last_booking.delete()  
+        except CallBooking.DoesNotExist:
+            pass
+
+        return redirect('success_delete_page')
+
         if self.last_booking:
             self.last_booking.delete()
 
-        return redirect('delete_booking')
+        return redirect('success_delete_page')
 
 
-class SuccessBookingView(View):
+class SuccessDeleteView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'booking/success_delete_page.html') 
