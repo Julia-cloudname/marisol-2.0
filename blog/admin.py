@@ -31,7 +31,7 @@ class CommentAdmin(admin.ModelAdmin):
 
 @admin.register(CallBooking)
 class CallBookingAdmin(admin.ModelAdmin):
-    list_display = ('id', 'client_name', 'client_email', 'phone_number', 'details', 'call_data', 'user')  # Include 'user' in list_display
+    list_display = ('id', 'client_name', 'client_email', 'phone_number', 'details', 'call_data', 'user', 'created_on')  
     list_filter = ('call_date', 'call_time')
     search_fields = ('client_name', 'client_email', 'phone_number')
     date_hierarchy = 'call_date'

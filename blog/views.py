@@ -136,17 +136,18 @@ class SuccessView(View):
 class UserProfileView(View):
     def get(self, request, *args, **kwargs):
         try:
-            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+            last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
         except CallBooking.DoesNotExist:
             last_booking = None
 
         return render(request, 'profile.html', {"last_booking": last_booking})
 
 
+
 class EditBookingView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         try:
-            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+            last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
             booking_form = CallBookingForm(instance=last_booking)
         except CallBooking.DoesNotExist:
             last_booking = None
@@ -178,7 +179,7 @@ class EditBookingView(LoginRequiredMixin, View):
 
     def post(self, request, *args, **kwargs):
         try:
-            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+            last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
         except CallBooking.DoesNotExist:
             last_booking = None
 
@@ -220,16 +221,29 @@ class EditBookingView(LoginRequiredMixin, View):
         )
 
 class DeleteBookingView(LoginRequiredMixin, View):
+    last_booking = None
+
     def get(self, request, *args, **kwargs):
         try:
-            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+            self.last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
         except CallBooking.DoesNotExist:
-            last_booking = None
+            self.last_booking = None
 
         return render(
             request,
             'booking/delete_booking.html',
             {
-                "last_booking": last_booking,
+                "last_booking": self.last_booking,
             }
         )
+    
+    def post(self, request, *args, **kwargs):
+        if self.last_booking:
+            self.last_booking.delete()
+
+        return redirect('delete_booking')
+
+
+class SuccessBookingView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'booking/success_delete_page.html') 

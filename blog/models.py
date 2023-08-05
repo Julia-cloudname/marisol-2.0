@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 import datetime
+from datetime import datetime
 
 
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -56,6 +57,7 @@ class CallBooking(models.Model):
     details = models.TextField(blank=True)
     call_date = models.DateField(null=False, blank=False)
     call_time = models.TimeField(null=True, blank=False)
+    created_on = models.DateTimeField(auto_now_add=True)
 
     def get_client_name(self):
         return self.client_name
