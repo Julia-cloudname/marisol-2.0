@@ -82,6 +82,35 @@
     margin-right: 30%;
 }
 
+.delete_booking_button {
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    background-color: #ef6b37;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#first_button,
+#second_button {
+    display: grid;
+    margin-right: 20px;  
+}
+
+#confirmation {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Style footer */
 .footer {
     padding: 20px;
     background-color: rgb(25, 24, 24);

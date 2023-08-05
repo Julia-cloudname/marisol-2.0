@@ -18,7 +18,8 @@ class CallBookingForm(forms.ModelForm):
         model = CallBooking
         fields = ['client_name', 'client_email', 'phone_number', 'details', 'call_date']
         widgets = {
-            'call_date': DateInput(),
+            'call_date': forms.DateInput(attrs={'type': 'date'}),
+            'call_time': forms.TimeInput(attrs={'type': 'time'}),
         }
 
     def __init__(self, *args, **kwargs):

@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from blog.views import PostList, PostDetail, BookingView, SuccessView, UserProfileView, EditBookingView
+from blog.views import PostList, PostDetail, BookingView, SuccessView, UserProfileView, EditBookingView, DeleteBookingView
 from allauth.account.views import LogoutView
 
 urlpatterns = [
@@ -13,4 +13,5 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path('accounts/logout/', LogoutView.as_view(), name='account_logout'),
     path('edit_booking/', EditBookingView.as_view(), name='edit_booking'),
+    path('delete_booking/', DeleteBookingView.as_view(), name='delete_booking'),
 ]

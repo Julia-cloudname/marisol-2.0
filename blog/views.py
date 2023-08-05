@@ -100,7 +100,7 @@ class BookingView(View):
             call_time = request.POST['call_time']
             booking = booking_form.save(commit=False)
             booking.call_time = call_time
-            booking.user = request.user  # Set the user for the CallBooking instance
+            booking.user = request.user  
             booking.save()
             return redirect(reverse('success_page')) 
 
@@ -130,7 +130,7 @@ class BookingView(View):
     
 class SuccessView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'success_page.html')
+        return render(request, 'booking/success_page.html')
 
 
 class UserProfileView(View):
@@ -192,7 +192,10 @@ class EditBookingView(LoginRequiredMixin, View):
             booking.user = request.user
             booking.save()
             return redirect('success_page')
-        
+
+        print("Form is valid:", booking_form.is_valid())
+        print("Errors:", booking_form.errors)
+
         available_time_slots = [
             ('09:00', '10:00 AM'),
             ('10:00', '11:00 AM'),
@@ -213,5 +216,20 @@ class EditBookingView(LoginRequiredMixin, View):
                 "last_booking": last_booking,
                 "booking_form": booking_form,
                 "available_time_slots": available_time_slots,
+            }
+        )
+
+class DeleteBookingView(LoginRequiredMixin, View):
+    def get(self, request, *args, **kwargs):
+        try:
+            last_booking = CallBooking.objects.filter(user=request.user).latest('call_date', 'call_time')
+        except CallBooking.DoesNotExist:
+            last_booking = None
+
+        return render(
+            request,
+            'booking/delete_booking.html',
+            {
+                "last_booking": last_booking,
             }
         )
