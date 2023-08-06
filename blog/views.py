@@ -5,7 +5,9 @@ from .models import Post, CallBooking
 from .forms import CallBookingForm, CommentForm
 import datetime
 from django.urls import reverse
+import logging
 
+logger = logging.getLogger(__name__)
 
 class PostList(generic.ListView):
     model = Post
@@ -69,33 +71,20 @@ class PostDetail(View):
 
 
 class BookingView(View):
-    def get(self, request, *args, **kwargs):
-        booking_form = CallBookingForm()
-        available_time_slots = [
-            ('09:00', '10:00 AM'),
-            ('10:00', '11:00 AM'),
-            ('11:00', '12:00 AM'),
-            ('12:00', '1:00 PM'),
-            ('01:00', '02:00 PM'),
-            ('02:00', '03:00 PM'),
-            ('03:00', '04:00 PM'),
-            ('04:00', '05:00 PM'),
-            ('05:00', '06:00 PM'),
-            ('06:00', '07:00 PM'),
-            ('07:00', '08:00 PM'),
-        ]
+    booking_form = CallBookingForm()
 
+    def get(self, request, *args, **kwargs):
         return render(
             request,
             "booking/booking.html",
             {
-                "booking_form": booking_form,
-                "available_time_slots": available_time_slots,
+                "booking_form": self.booking_form,
             },
         )
 
     def post(self, request, *args, **kwargs):
-        booking_form = CallBookingForm(data=request.POST)
+        if request.method == 'POST':
+            booking_form = CallBookingForm(request.POST)
         if booking_form.is_valid():
             call_time = request.POST['call_time']
             booking = booking_form.save(commit=False)
@@ -104,26 +93,11 @@ class BookingView(View):
             booking.save()
             return redirect(reverse('success_page')) 
 
-        available_time_slots = [
-            ('09:00', '10:00 AM'),
-            ('10:00', '11:00 AM'),
-            ('11:00', '12:00 AM'),
-            ('12:00', '1:00 PM'),
-            ('01:00', '02:00 PM'),
-            ('02:00', '03:00 PM'),
-            ('03:00', '04:00 PM'),
-            ('04:00', '05:00 PM'),
-            ('05:00', '06:00 PM'),
-            ('06:00', '07:00 PM'),
-            ('07:00', '08:00 PM'),
-        ]
-
         return render(
             request,
             "booking/booking.html",
             {
                 "booking_form": booking_form,
-                "available_time_slots": available_time_slots,
             },
         )
 
@@ -139,9 +113,7 @@ class UserProfileView(View):
             last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
         except CallBooking.DoesNotExist:
             last_booking = None
-
         return render(request, 'profile.html', {"last_booking": last_booking})
-
 
 
 class EditBookingView(LoginRequiredMixin, View):
@@ -153,27 +125,12 @@ class EditBookingView(LoginRequiredMixin, View):
             last_booking = None
             booking_form = CallBookingForm()
 
-        available_time_slots = [
-            ('09:00', '10:00 AM'),
-            ('10:00', '11:00 AM'),
-            ('11:00', '12:00 AM'),
-            ('12:00', '1:00 PM'),
-            ('01:00', '02:00 PM'),
-            ('02:00', '03:00 PM'),
-            ('03:00', '04:00 PM'),
-            ('04:00', '05:00 PM'),
-            ('05:00', '06:00 PM'),
-            ('06:00', '07:00 PM'),
-            ('07:00', '08:00 PM'),
-        ]
-
         return render(
             request,
             'booking/booking.html',
             {
                 "last_booking": last_booking,
                 "booking_form": booking_form,
-                "available_time_slots": available_time_slots,
             }
         )
 
@@ -194,48 +151,28 @@ class EditBookingView(LoginRequiredMixin, View):
             booking.save()
             return redirect('success_page')
 
-        print("Form is valid:", booking_form.is_valid())
-        print("Errors:", booking_form.errors)
-
-        available_time_slots = [
-            ('09:00', '10:00 AM'),
-            ('10:00', '11:00 AM'),
-            ('11:00', '12:00 AM'),
-            ('12:00', '1:00 PM'),
-            ('01:00', '02:00 PM'),
-            ('02:00', '03:00 PM'),
-            ('03:00', '04:00 PM'),
-            ('04:00', '05:00 PM'),
-            ('05:00', '06:00 PM'),
-            ('06:00', '07:00 PM'),
-            ('07:00', '08:00 PM'),
-        ]
         return render(
             request,
             'booking/booking.html',
             {
                 "last_booking": last_booking,
                 "booking_form": booking_form,
-                "available_time_slots": available_time_slots,
             }
         )
 
+
 class DeleteBookingView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
+        # logger.error("Get")
         try:
             last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
         except CallBooking.DoesNotExist:
             last_booking = None
 
-        return render(
-            request,
-            'booking/delete_booking.html',
-            {
-                "last_booking": last_booking,
-            }
-        )
+        return render(request,'booking/delete_booking.html')
 
     def post(self, request, *args, **kwargs):
+        # logger.error("Post")
         try:
             last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
             last_booking.delete()  
@@ -243,12 +180,6 @@ class DeleteBookingView(LoginRequiredMixin, View):
             pass
 
         return redirect('success_delete_page')
-
-        if self.last_booking:
-            self.last_booking.delete()
-
-        return redirect('success_delete_page')
-
 
 class SuccessDeleteView(View):
     def get(self, request, *args, **kwargs):

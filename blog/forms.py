@@ -12,14 +12,31 @@ class DateInput(forms.DateInput):
 class TimeInput(forms.TimeInput):
     input_type = 'time'
 
+def get_time_intervals():
+    return [
+        ('09:00', '9:00 AM - 10:00 AM'),
+        ('10:00', '10:00 AM - 11:00 AM'),
+        ('11:00', '11:00 AM - 12:00 PM'),
+        ('12:00', '12:00 AM - 1:00 PM'), 
+        ('1:00', '1:00 PM - 2:00 PM'),
+        ('2:00', '2:00 PM - 3:00 PM'),
+        ('3:00', '3:00 PM - 4:00 PM'),
+        ('4:00', '4:00 PM - 5:00 PM'),
+        ('5:00', '5:00 PM - 6:00 PM'),
+        ('6:00', '6:00 PM - 7:00 PM'),
+        ('7:00', '7:00 PM - 8:00 PM'),
+    ]
+
 # Form for creating or updating CallBooking instances.
 class CallBookingForm(forms.ModelForm):
+    call_time = forms.ChoiceField(choices=get_time_intervals, label='Select time')
+
     class Meta:
         model = CallBooking
-        fields = ['client_name', 'client_email', 'phone_number', 'details', 'call_date']
+        fields = ['client_name', 'client_email', 'phone_number', 'details', 'call_date', 'call_time']
         widgets = {
-            'call_date': forms.DateInput(attrs={'type': 'date'}),
-            'call_time': forms.TimeInput(attrs={'type': 'time'}),
+            'call_date': DateInput(),
+            'call_time': TimeInput(),
         }
 
     def __init__(self, *args, **kwargs):

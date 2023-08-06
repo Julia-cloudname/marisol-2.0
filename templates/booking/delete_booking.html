@@ -7,7 +7,10 @@
         <div class="col-lg-8 col-md-10 mx-auto">
             <p id="confirmation">Are you sure you want to delete booking?</p>
             <span id="first_button"><a class="change_booking_button" href="{% url 'edit_booking' %}">Edit Booking</a></span>
-            <span id="second_button"><a class="delete_booking_button" href="{% url 'success_delete_page' %}">Delete Booking</a></span>
+            <form method="post" action="{% url 'delete_booking' %}">
+                {% csrf_token %}
+                <button type="submit" class="delete_booking_button">Delete</button>
+            </form>
         </div>
     </div>
 </div>
