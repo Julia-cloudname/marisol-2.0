@@ -7,6 +7,7 @@ from datetime import datetime
 
 STATUS = ((0, "Draft"), (1, "Published"))
 
+# Model representing a blog post.
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -31,7 +32,7 @@ class Post(models.Model):
     def number_of_likes(self):
         return self.likes.count()
 
-
+# Model representing comments on a blog post.
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
@@ -47,7 +48,10 @@ class Comment(models.Model):
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
 
-
+# Model representing a call booking made by users.
+# This model stores information about call bookings made by users, including the client's contact details,
+# preferred call date and time, and additional notes if provided. The 'created_on' field is automatically
+# populated with the timestamp when the booking record is created.
 class CallBooking(models.Model):
     id = models.AutoField(primary_key=True) 
     user = models.ForeignKey(User, on_delete=models.CASCADE)

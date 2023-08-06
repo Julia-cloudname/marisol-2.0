@@ -11,6 +11,7 @@ urlpatterns = [
     path('success_page/', SuccessView.as_view(), name='success_page'),
     path('profile/', UserProfileView.as_view(), name='profile'),
     path("accounts/", include("allauth.urls")),
+    path('summernote/', include('django_summernote.urls')),
     path('accounts/logout/', LogoutView.as_view(), name='account_logout'),
     path('edit_booking/', EditBookingView.as_view(), name='edit_booking'),
     path('delete_booking/', DeleteBookingView.as_view(), name='delete_booking'),
