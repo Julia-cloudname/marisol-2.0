@@ -43,6 +43,12 @@ h1 {
   margin-bottom: 10%;
 }
 
+.blog-title {
+  text-align: center;
+  color: #eee;
+  margin-bottom: 2%;
+}
+
 .container, .container-lg, .container-md, .container-sm {
   max-width: 960px;
   color: #eee;
@@ -89,7 +95,7 @@ h1 {
 
 .row {
   display: flex;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .change_booking_button {
@@ -360,6 +366,10 @@ body {
   text-align: center;
 }
 
+.about-us-title {
+  text-align: center;
+}
+
 .page-head {
   padding: 60px 0;
   text-align: center;
@@ -372,6 +382,10 @@ body {
   margin-bottom: 50px;
   margin-top: 0;
   color: #eee;
+}
+
+.page-link {
+  margin-top: 120px;
 }
 
 .btn {
