@@ -11,6 +11,10 @@ h1 {
   font-size: 38px;
 }
 
+.container-fluid {
+  margin-left: 2%;
+}
+
 .navbar-brand {
   color: white;
 }
