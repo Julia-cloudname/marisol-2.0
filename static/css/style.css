@@ -377,6 +377,13 @@ body {
   text-align: center;
 }
 
+#about-us-title p {
+  text-align: justify;
+}
+#about-us-title li {
+  text-align: justify;
+}
+
 .page-head {
   margin-top: 3%;
 }
