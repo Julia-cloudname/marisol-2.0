@@ -94,3 +94,35 @@ To help define the functionalities and prioritise key features, these 'User Stor
 - User Profile Management: The site emphasizes the importance of user profiles. Users can easily manage their consultation bookings, view details of their reservations, interact with blog posts and engage with other community members.
 
 <hr>
+
+## **DESIGN**
+
+### **Colours**
+- For the colour schema of the site I opted for a dark theme for the header and footer, using (colour) with a contrasting lighter neutral page background colour of (colour). 
+
+### **Typography**
+- I chose (font) for my Navigation menu and Header Title fonts
+- All fonts were sourced through [Google fonts](https://fonts.google.com/).
+
+### **Media**
+- [Balsamiq](https://balsamiq.com/) was used for the design of my wireframes.
+- Canva was used for the design of the logo
+- Drawsql.app was used for the design of the database schema 
+
+### **Wireframes**
+Wireframes for each page are linked here:
+
+[Home Page](link)
+
+[Profile](link)
+
+[Booking](link)
+
+[Signup Page](link)
+
+[Login Page](link)
+
+### **Database Schema**
+![Database Schema](link)
+
+<hr>
