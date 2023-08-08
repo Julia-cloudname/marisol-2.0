@@ -1,39 +1,70 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **Marisol Furniture Website**
 
-Welcome,
+The Marisol Furniture website serves as a portfolio and blog platform designed for potential customers interested in bespoke furniture. This project is developed using the Django framework and incorporates various features that facilitate interaction between customers and furniture specialists. Marisol Furniture offers users the ability to request a consultation call with an expert who can provide insights into custom furniture options, pricing, materials, and more.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Marisol](https://marisol-801c526b3523.herokuapp.com/) - The live site can be viewed here.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **July 26th, 2023**
+![Am I Responsive?](link)
 
-## Codeanywhere Reminders
+<hr>
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+## **TABLE OF CONTENTS**
 
-`python3 -m http.server`
+ - [**User Experience (UX)**](#user-experience)
+    * [User Stories](#user-stories)
+    * [Agile Methodology](#agile-methodology)
+    * [The Scope](#the-scope)
+ - [**Design**](#design)
+    * [Colours](#colours)
+    * [Typography](#typography)
+    * [Media](#media)
+    * [Wireframes](#wireframes)
+    * [Database Schema](#database-schema)
+ - [**Features**](#features)
+   * [Navigation](#navigation)
+   * [Footer](#footer)
+   * [Home Page](#home-page)
+   * [About Page](#about-page)
+   * [Build Threads Blog Page](#build-threads-blog-page)
+   * [Featured Threads Page](#featured-threads-page)
+   * [My Threads Page](#my-threads-page)
+   * [Create Build Thread Page](#create-build-thread-page)
+   * [Thread Details Page](#thread-details-page)
+ - [**Testing**](#testing)
+ - [**Technologies Used**](#technology-used)
+ - [**Deployment**](#deployment)
+ - [**Credits**](#credits)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+<hr>
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+## **USER EXPERIENCE (UX)**
 
-`http_server`
+### **User Stories**
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Unregistered site user:
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+- As a user, I can understand the site's purpose as soon as I land on the homepage.
+- As a user, I can navigate the site's content without difficulty or confusion.
+- As a user, I can view a list of all the blog articles.
+- As a user, I can click on and view each blog article so I can view the content.
+- As a user, I can view how many likes each blog article has received.
+- As a user, I can view approved  comments made on each blog article.
+- As a user, I can easily locate and visit social media links.
+- As a user, I can sign up and register on the site.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Regsitered site user:
 
-To log into the Heroku toolbelt CLI:
+- As a user, I can perform the same actions as an unregistered site user.
+- As a user, I can log in and easily make call bookings.
+- As a user, I can edit/delete call bookings I have created.
+- As a user, I can see my last call booking on the profile page.
+- As a user, I can like/unlike blog articles.
+- As a user, I can post comments on blog articles.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+Site Admin/Superuser:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+- As a user, I can perform the same functionalities as unregistered and registered users.
+- As a user, I can create, edit and delete blog articles from the admin panel. 
+- As a user, I can approve, edit and delete comments to allow control over inappropriate content.
+- As a user, I can see a list of booked calls in the admin panel.
+- As a user, I can edit and delete booked calls and create new ones if I need this for some reason.
