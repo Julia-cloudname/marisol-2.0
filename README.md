@@ -68,3 +68,29 @@ Site Admin/Superuser:
 - As a user, I can approve, edit and delete comments to allow control over inappropriate content.
 - As a user, I can see a list of booked calls in the admin panel.
 - As a user, I can edit and delete booked calls and create new ones if I need this for some reason.
+
+<hr>
+
+### **Agile Methodology**
+
+For planning the development and implementation of the Marisol website, a project kanban board was used as an Agile Tool through Github. This project board utilised issues as 'User Stories', a link can be found [here](https://github.com/users/Julia-cloudname/projects/6).
+
+To help define the functionalities and prioritise key features, these 'User Stories' were broken down into 4 categories of importance; 'Must Have', 'Should Have',  'Could Have' and 'Won't have'.
+
+'Must Have' represents a feature or functionality that is essential to the site, 'Should Have' is a defined requirement needed for the site, 'Could Have' is determined to be optional and 'Won't have' - future functionality that I'm going to do later.
+
+<hr>
+
+### **The Scope**
+
+#### **The Site's Main Goals:**
+
+- Positive User Experience: The primary goal of the Marisol Furniture website is to provide users with an intuitive, efficient, and enjoyable experience. From browsing articles to scheduling consultations, the site aims to create a seamless journey for users.
+
+- Clear Purpose: The site aims to present its purpose and offerings clearly. It allows users to quickly understand that Marisol Furniture is a platform where they can explore custom furniture options, book consultations, and engage with informative content.
+
+- Controlled Functionality: Based on a user's permissions, the website offers controlled functionality. Registered users have access to profile management, consultation booking, and engagement with blog articles, while specialists have the ability to publish articles and manage user interactions.
+
+- User Profile Management: The site emphasizes the importance of user profiles. Users can easily manage their consultation bookings, view details of their reservations, interact with blog posts and engage with other community members.
+
+<hr>
