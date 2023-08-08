@@ -11,10 +11,6 @@ h1 {
   font-size: 38px;
 }
 
-.container-fluid {
-  margin-left: 2%;
-}
-
 .navbar-brand {
   color: white;
 }
@@ -439,6 +435,10 @@ body {
   border-color: #eeeeee;
   color: #eeeeee;
   transition: color 0.1s ease 0s, background-color 0.15s ease 0s;
+}
+
+a.post-link {
+  text-decoration: none;
 }
 
 .page-head h1 {
