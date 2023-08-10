@@ -2,6 +2,7 @@
 
 /* Main layout container */
 .layout {
+  height: 40%;
   visibility: inherit;
   color: #edf5fd;
 }
@@ -31,18 +32,18 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  height: 90%;
+  height: 100%;
   justify-content: center;
   position: relative;
 }
 
-.wrapper .container_description {
+.container_description {
   background: rgb(26 23 23 / 75%);
-  padding: 4.8rem 0px;
+  padding: 1.8rem 0px;
   text-align: center;
   width: 85%;
-  height: 66%;
-  margin-top: 6%;
+  height: 75%;
+  margin-top: 4%;
   margin-bottom: 10%;
 }
 
@@ -53,7 +54,6 @@ h1 {
 }
 
 .container, .container-lg, .container-md, .container-sm {
-  max-width: 960px;
   color: #eee;
 }
 .card-title {
@@ -63,8 +63,8 @@ h1 {
 }
 
 .mt-3 {
-  margin-top: 1rem !important;
-  margin-bottom: -8%;
+  margin-top: 3rem !important;
+  margin-bottom: 0%;
 }
 
 /* Likes style */
@@ -114,7 +114,12 @@ h1 {
 
 .row {
   display: flex;
-  margin-bottom: 3%;
+
+}
+
+.row-edit_booking {
+  margin-bottom: 5%;
+  margin-top: 2%;
 }
 
 .change_booking_button {
@@ -122,7 +127,7 @@ h1 {
   margin-bottom: 5%;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
-  background-color: #6ca159;
+  background-color: #2c855c;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -130,7 +135,23 @@ h1 {
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
   margin-left: 30%;
-  margin-right: 31%;
+  margin-right: 30%;
+}
+
+.change_booking_button_profile {
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: #2c855c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 36%;
+  margin-right: 5%;
 }
 
 .delete_booking_button {
@@ -150,6 +171,26 @@ h1 {
   margin-right: 30%;
 }
 
+.delete_booking_button_profile {
+  width: 38%;
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  background-color: #ef6b37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* .flex-shrink-0 {
+  height: 92%;
+  flex-shrink: 0!important;
+} */
+
 #first_button,
 #second_button {
   display: grid;
@@ -166,14 +207,22 @@ h1 {
 
 /* Style footer */
 .footer {
-  padding: 20px;
+  padding: 30px;
   background-color: rgb(25, 24, 24);
 }
 
 .footer a {
-  font-size: 40px;
+  font-size: 30px;
 }
 
+.footer p {
+  margin-top: 6px;
+  margin-bottom: 0%;
+}
+
+.footer .mt-auto .py-3 .dark-bg {
+  height: 100%;
+}
 a {
   color: white;
 }
@@ -191,7 +240,7 @@ body {
 }
 
 .user-card-full {
-  overflow: hidden;
+  height: 110%;
 }
 
 .card {
@@ -249,6 +298,13 @@ h6 {
   }
 }
 
+@media only screen and (min-width: 1200px){
+.col-xl-6 {
+    flex: 2 0 auto;
+    width: 50%;
+    /* height: 121%; */
+}
+}
 .card-block {
   padding: 20px;
 }
@@ -326,7 +382,6 @@ h6 {
 .col-sm-8 {
   flex: 0 0 auto;
   width: 66.66666667%;
-  color: darkslategray;
 }
 
 .col-md-10 {
@@ -353,8 +408,8 @@ dl, ol, ul {
 }
 
 .py-3 {
-  padding-top: 2rem!important;
-  padding-bottom: 2rem!important;
+  padding-top: 0rem!important;
+  /* padding-bottom: 0rem!important; */
 }
 
 /* Gallery */
@@ -402,9 +457,11 @@ body {
 
 .cont {
   text-align: center;
+  font-size: 14px;
 }
 
 #about-us-title {
+  margin-top: 5%;
   text-align: center;
 }
 
@@ -419,11 +476,15 @@ body {
   margin-top: 3%;
 }
 .page-head, #lead, .small {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.4;
   margin-bottom: 50px;
   color: #eee;
+}
+
+.page-container {
+  height: 92%;
 }
 
 .page-link {
@@ -431,6 +492,8 @@ body {
 }
 
 .btn {
+  background-color: #ef6b37;
+  color: white;
   -moz-user-select: none;
   background-image: none;
   border: 1px solid transparent;
