@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Post, CallBooking
+from django.http import HttpResponseRedirect
 from .forms import CallBookingForm, CommentForm
 import datetime
 from django.urls import reverse
@@ -69,6 +70,16 @@ class PostDetail(View):
             },
         )
 
+class PostLike(View):
+    
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(Post, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 class BookingView(View):
     booking_form = CallBookingForm()
