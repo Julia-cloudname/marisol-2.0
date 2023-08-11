@@ -28,8 +28,10 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
    * [Blog](#blog)
    * [Homepage Display](#homepage-display)
    * [Article Interaction](#article-interaction)
-   * [Create Build Thread Page](#create-build-thread-page)
-   * [Thread Details Page](#thread-details-page)
+   * [Call Booking](#call-booking)
+   * [Booking Button Block](#booking-button-block)
+   * [Booking Page](#booking-page)
+   * [Booking Form](#booking-form)
  - [**Testing**](#testing)
  - [**Technologies Used**](#technology-used)
  - [**Deployment**](#deployment)
@@ -229,3 +231,5 @@ Blog is a dynamic collection of insightful articles, with the following features
 - After clicking the submit button, the user is taken to a page confirming the successful booking. Below the confirmation message, there are buttons to edit or delete the booking.
 
 ![Gallery](docs/read-me/footer.png)
+
+
