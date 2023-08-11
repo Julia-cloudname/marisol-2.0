@@ -117,6 +117,7 @@ I used templates:
 - [For gallery and background](https://codepen.io/sachinchoolur/pen/qNyvGW)
 
 ## **Colours**
+
 The templates utilize a cohesive colour scheme to create a visually appealing interface. The primary background colour is a dark shade, #152836, which provides a solid base. This dark background enhances the readability of the content and contrasts well with the text colour.
 
 The secondary background colour, #333, is also utilized in specific elements, contributing to a consistent design. The primary text colour is #eee, providing a high contrast against the dark background, ensuring readability.
@@ -130,11 +131,13 @@ The font size and weight follow the Bootstrap conventions, with variables define
 The chosen fonts and colour scheme create a simple and modern user interface, making it easy for users to navigate and engage with the content. The templates leverage Bootstrap's well-designed components to create a professional and visually appealing website.
 
 ### **Media**
+
 - [Balsamiq](https://balsamiq.com/) was used for the design of my wireframes.
-- Canva was used for the design of the logo
-- Drawsql.app was used for the design of the database schema 
+- [Canva](https://www.canva.com/) was used for the design of the logo
+- [Drawsql.app](https://drawsql.app/) was used for the design of the database schema 
 
 ### **Wireframes**
+
 Wireframes for each page are linked here:
 
 [Home Page](link)
@@ -318,7 +321,8 @@ The registration form includes fields for the following information, along with 
 
 ### **Future Additions**
 
-In the future, we plan to implement account validation to prevent duplicate accounts. If a user attempts to register with a username or email that already exists, they will be prompted to choose a different username or email to complete the registration process if a user with the same credentials already exists. This enhancement will help ensure unique user accounts on the platform.
+- In the future, we plan to implement account validation to prevent duplicate accounts. If a user attempts to register with a username or email that already exists, they will be prompted to choose a different username or email to complete the registration process if a user with the same credentials already exists. This enhancement will help ensure unique user accounts on the platform.
+- One of the upcoming enhancements will be the addition of a customer reviews feature. This feature will allow users, especially customers who have purchased custom furniture from Marisol, to share their feedback and experiences with the community. 
 
 <hr>
 
