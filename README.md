@@ -32,6 +32,8 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
    * [Booking Button Block](#booking-button-block)
    * [Booking Page](#booking-page)
    * [Booking Form](#booking-form)
+   * [Edit Booking Page](#edit-booking-page)
+   * [Delete Booking Page](#delete-booking-page)
  - [**Testing**](#testing)
  - [**Technologies Used**](#technology-used)
  - [**Deployment**](#deployment)
