@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
+    <div class="col-lg-8 col-md-10-booking mx-auto">
         {% if user.is_authenticated %}
         <p>Select a suitable date and time, and we'll contact you shortly.</p>
         <form method="post">
@@ -15,7 +15,7 @@
             </form>
         </form>
         {% else %}
-        <p>Please, sign up for booking call</p>
+        <p>Please, log in to book a call, or register on the website if you don't have an account yet </p>
         {% endif %}
     </div>
 </div>
