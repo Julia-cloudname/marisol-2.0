@@ -138,5 +138,22 @@ Wireframes for each page are linked here:
 - If a user is not logged in, the navigation menu will feature a link to the 'Registration Page', encouraging new users to create accounts or log in to access more features of the site.
 - The navigation bar is designed with responsiveness in mind, adapting seamlessly to various screen sizes. On smaller devices, it collapses into a convenient burger menu, ensuring an optimal browsing experience across devices.
 
-This feature enhances the user experience by providing easy navigation to essential sections of the Marisol Furniture Website and enabling registered users to manage their accounts efficiently.
 ![Desktop Nav](docs/read-me/desktop-nav.png)
+
+This feature enhances the user experience by providing easy navigation to essential sections of the Marisol Furniture Website and enabling registered users to manage their accounts efficiently.
+
+
+#### **Mobile Navigation**
+
+- The mobile version of the Marisol Furniture Website features a convenient burger menu, ensuring a responsive and user-friendly design for smaller screens.
+- When users tap on the burger icon, a dropdown menu unfolds, providing easy access to the same essential page links as mentioned before. This includes the primary pages, such as 'Home', 'Blog', and 'Gallery', along with the user-specific dropdown menu.
+
+![Mobile Nav](docs/read-me/desktop-nav.png)
+
+This mobile navigation approach allows users to navigate the site efficiently on their mobile devices, maintaining consistent access to key sections and user account options through the intuitive dropdown menu.
+
+### **Footer**
+
+- Positioned at the bottom of each page, the footer of the Marisol Furniture Website is dedicated to connecting with our audience on various social media platforms.
+- While currently featuring placeholders for social media icons, I will add direct links to official profiles across popular networks such as YouTube, Facebook, Twitter, and Instagram in later versions.
+![Footer](docs/read-me/footer.png)
