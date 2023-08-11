@@ -227,9 +227,36 @@ Blog is a dynamic collection of insightful articles, with the following features
 - The user sees a booking form where they can provide the name, email, and phone number of the person who needs the consultation. This feature is designed for users who want to book a call for themselves, their close ones or friends.
 - The form includes a message field where users can specify the details of the call - their specific interests, pricing, materials, or other questions. This allows the specialist to prepare for the call and provide comprehensive information.
 - Users can select a convenient date using a datepicker calendar and a suitable time interval from a dropdown list.
+
+![Booking form](docs/read-me/footer.png)
+
 - If the user selects a past or today's date, a message appears in red: "The call date cannot be in the past or today!"
+
+![Message](docs/read-me/footer.png)
+
 - After clicking the submit button, the user is taken to a page confirming the successful booking. Below the confirmation message, there are buttons to edit or delete the booking.
 
-![Gallery](docs/read-me/footer.png)
+![Success](docs/read-me/footer.png)
+
+### **Edit Booking Page:**
+
+- When the user clicks the "Edit Booking" button, they are taken to the editing page, where a pre-filled booking form is automatically loaded with the details of their last booking.
+
+![Success page](docs/read-me/footer.png)
+
+- The user can make any necessary changes to the booking information and then save the updates. Upon saving, they are redirected to the success page.
+- On the success page, the user receives a confirmation message about the successful changes to the booking, along with two buttons: "Edit Booking" and "Delete Booking."
+
+### **Delete Booking Page:**
+
+- When the user clicks the "Delete Booking" button, they are taken to the deletion page, where they see a warning message: "Are you sure you want to delete this booking?" Below the message, there are two buttons: "Edit Booking" and "Delete Booking."
+
+![Delete Booking](docs/read-me/footer.png)
+
+- If the user confirms the deletion by clicking the "Delete Booking" button, the booking is permanently removed from the user's account and from the administrator panel.
+- After successful deletion, the user is redirected to the success page with the message: "Call Booking Successfully Deleted!"
+
+![Delete Success page](docs/read-me/footer.png)
+
 
 
