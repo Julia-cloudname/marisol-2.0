@@ -29,9 +29,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
-X_FRAME_OPTIONS = 'SAMEORIGIN'
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-juliacloudname-marisol-veb4f6i9n1p.ws-eu102.gitpod.io', '8000-juliacloudname-marisol-veb4f6i9n1p.ws-eu103.gitpod.io', 'marisol-801c526b3523.herokuapp.com']
 
