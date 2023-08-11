@@ -36,6 +36,8 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
    * [Delete Booking Page](#delete-booking-page)
    * [Profile Page](#profile-page)
    * [Administrative Panel](#administrative-panel)
+   * [Signup Page](#signup-page)
+   * [Future Additions](#future-additions)
  - [**Testing**](#testing)
  - [**Technologies Used**](#technology-used)
  - [**Deployment**](#deployment)
@@ -205,10 +207,17 @@ Blog is a dynamic collection of insightful articles, with the following features
 
 - Clicking on an article's title takes the user to the full version of the article, where they can read the entire content.
 - The full article view also displays comments made by other users, allowing for discussion and engagement with the content.
-- Registered users have the ability to leave comments in the dedicated comment section below the article.
-- If a user is not logged in, the comment form is not accessible, promoting a seamless user experience.
 
-![Article](docs/read-me/footer.png)
+![Article](docs/read-me/footer.png)  
+
+- Registered users have the ability to leave comments in the dedicated comment section below the article.
+
+![Comment form](docs/read-me/footer.png)  
+
+- If a user is not logged in, the comment form is not accessible. 
+- When a user submits a comment, it doesn't immediately appear on the site but is instead sent for approval by the administrator. The user is notified with a green message "Your comment is awaiting approval." Upon approval by the admin, the comment is published.
+
+![Comment message to user](docs/read-me/footer.png)
 
 ### **Call Booking**
 
@@ -278,5 +287,22 @@ Blog is a dynamic collection of insightful articles, with the following features
 - In the "Bookings" section, the administrator can add, edit, and delete bookings from all users. The administrator can also view comprehensive information about all bookings.
 
 ![Administrative Panel Bookings](docs/read-me/footer.png)
+
+### **Signup Page**
+
+If the user is not registered, they can access the "Signup" button from the navigation menu, which leads them to a welcome message and the registration form.
+
+The registration form includes fields for the following information, along with helpful prompts:
+- Username: (Username)
+- E-mail (optional): (E-mail address)
+- Password: (Password)
+- Password (again): (Password)
+- The form also includes a registration confirmation button.
+
+### **Future Additions**
+
+In the future, we plan to implement account validation to prevent duplicate accounts. If a user attempts to register with a username or email that already exists, they will be prompted to choose a different username or email to complete the registration process if a user with the same credentials already exists. This enhancement will help ensure unique user accounts on the platform.
+
+
 
 
