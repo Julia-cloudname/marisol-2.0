@@ -193,6 +193,8 @@ Blog is a dynamic collection of insightful articles, with the following features
 - As the number of articles exceeds six, a "Next Page" arrow appears, allowing users to explore additional articles.
 - When the user clicks "Next Page," the remaining article thumbnails are displayed, along with a "Back" button to return to the previous set of articles.
 
+![Blog](docs/read-me/footer.png)
+
 ### **Article Interaction:**
 
 - Clicking on an article's title takes the user to the full version of the article, where they can read the entire content.
@@ -200,3 +202,30 @@ Blog is a dynamic collection of insightful articles, with the following features
 - Registered users have the ability to leave comments in the dedicated comment section below the article.
 - If a user is not logged in, the comment form is not accessible, promoting a seamless user experience.
 
+![Article](docs/read-me/footer.png)
+
+### **Call Booking**
+
+### **Booking Button Block:**
+
+- Users can see a call booking block on every page of the website.
+- When the user clicks the "Book Call" button, they are redirected to the booking page.
+
+![Gallery](docs/read-me/footer.png)
+
+### **Booking Page:**
+
+- If the user is logged in, they see the booking form.
+- If not, they see a message prompting them to log in or register.
+
+![Gallery](docs/read-me/footer.png)
+
+### **Booking Form:**
+
+- The user sees a booking form where they can provide the name, email, and phone number of the person who needs the consultation. This feature is designed for users who want to book a call for themselves, their close ones or friends.
+- The form includes a message field where users can specify the details of the call - their specific interests, pricing, materials, or other questions. This allows the specialist to prepare for the call and provide comprehensive information.
+- Users can select a convenient date using a datepicker calendar and a suitable time interval from a dropdown list.
+- If the user selects a past or today's date, a message appears in red: "The call date cannot be in the past or today!"
+- After clicking the submit button, the user is taken to a page confirming the successful booking. Below the confirmation message, there are buttons to edit or delete the booking.
+
+![Gallery](docs/read-me/footer.png)
