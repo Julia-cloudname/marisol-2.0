@@ -15,6 +15,7 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
     * [Agile Methodology](#agile-methodology)
     * [The Scope](#the-scope)
  - [**Design**](#design)
+    * [Bootstrap Templates Styling](#bootstrap-templates-styling)
     * [Colours](#colours)
     * [Typography](#typography)
     * [Media](#media)
@@ -104,6 +105,16 @@ To help define the functionalities and prioritise key features, these 'User Stor
 <hr>
 
 ## **DESIGN**
+
+## **Bootstrap Templates Styling**
+
+The project's Bootstrap templates are designed to provide a visually appealing and consistent user experience. They utilize specific fonts and colours to achieve this. 
+
+I used templates:
+
+- [For website structure](https://getbootstrap.com/docs/4.3/examples/jumbotron/)
+- [For profile page](https://bbbootstrap.com/snippets/social-profile-container-63944396)
+- [For gallery and background](https://codepen.io/sachinchoolur/pen/qNyvGW)
 
 ### **Colours**
 - For the colour schema of the site I opted for a dark theme for the header and footer, using (colour) with a contrasting lighter neutral page background colour of (colour). 
