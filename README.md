@@ -10,8 +10,8 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
 
 ## **TABLE OF CONTENTS**
 
- - [**User Experience (UX)**](#user-experience)
-    * [User Stories](#user-stories)
+ - [**User Experience (UX)**](##user-experience-ux)
+    * [User Stories](marisol#user-stories)
     * [Agile Methodology](#agile-methodology)
     * [The Scope](#the-scope)
  - [**Design**](#design)
