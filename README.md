@@ -24,10 +24,10 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
    * [Navigation](#navigation)
    * [Footer](#footer)
    * [Home Page](#home-page)
-   * [About Page](#about-page)
-   * [Build Threads Blog Page](#build-threads-blog-page)
-   * [Featured Threads Page](#featured-threads-page)
-   * [My Threads Page](#my-threads-page)
+   * [Gallery Page](#gallery)
+   * [Blog](#blog)
+   * [Homepage Display](#homepage-display)
+   * [Article Interaction](#article-interaction)
    * [Create Build Thread Page](#create-build-thread-page)
    * [Thread Details Page](#thread-details-page)
  - [**Testing**](#testing)
@@ -157,3 +157,46 @@ This mobile navigation approach allows users to navigate the site efficiently on
 - Positioned at the bottom of each page, the footer of the Marisol Furniture Website is dedicated to connecting with our audience on various social media platforms.
 - While currently featuring placeholders for social media icons, I will add direct links to official profiles across popular networks such as YouTube, Facebook, Twitter, and Instagram in later versions.
 ![Footer](docs/read-me/footer.png)
+
+### **Home Page**
+The Home Page of the website features the following sections:
+
+- Navigation Menu: A simple and clear menu at the top of the page that helps users navigate to different sections of the website.
+- Booking Call-to-Action: Prominently displayed at the top, there's a block encouraging users to book a consultation with experts.
+- About Us: A section where users can read about the company, its values, and what sets it apart.
+- Blog Articles: A collection of articles from blog, providing insights, tips, and news related to furniture and design.
+- Gallery: A visual gallery showcasing images of custom furniture pieces, helping users see the quality of company work.
+- Footer: Located at the bottom of the page, the footer includes links to social media platforms (YouTube, Facebook, Twitter, and Instagram).
+![Home](docs/read-me/footer.png)
+
+### **Gallery**
+
+The Gallery is a collection of 4 photos, each showcasing a ready furniture project. 
+
+- Thumbnail Preview: On the main Gallery page, users see a grid of thumbnail images representing each furniture project. These thumbnails provide a quick glance at the projects.
+-  Click-to-Enlarge: When a user clicks on a thumbnail, the image opens in a larger view. This allows users to appreciate the details of the project and get a closer look at the craftsmanship.
+-  Project Description: Below each enlarged image, there is a brief description of the project. This description provides insight into the design, materials used, and any special features that make the project unique.
+-  Easy Navigation: While viewing an enlarged image, users can navigate between the images using arrow buttons. This allows users to seamlessly move through the entire collection without leaving the fullscreen view.
+-  Flexible Interaction: Users have the option to exit the fullscreen view at any time. They can click on the "X" button to close it
+
+![Gallery](docs/read-me/footer.png)
+
+The Gallery is designed to showcase the quality and creativity of work, giving users a chance to appreciate the details and learn about the craftsmanship behind each piece of custom furniture.
+
+### **Blog**
+
+Blog is a dynamic collection of insightful articles, with the following features:
+
+### **Homepage Display:**
+
+- The main Blog page features a grid of three articles, each presented with a thumbnail image, article title, author's name, publication date, and the number of likes received.
+- As the number of articles exceeds six, a "Next Page" arrow appears, allowing users to explore additional articles.
+- When the user clicks "Next Page," the remaining article thumbnails are displayed, along with a "Back" button to return to the previous set of articles.
+
+### **Article Interaction:**
+
+- Clicking on an article's title takes the user to the full version of the article, where they can read the entire content.
+- The full article view also displays comments made by other users, allowing for discussion and engagement with the content.
+- Registered users have the ability to leave comments in the dedicated comment section below the article.
+- If a user is not logged in, the comment form is not accessible, promoting a seamless user experience.
+
