@@ -116,12 +116,18 @@ I used templates:
 - [For profile page](https://bbbootstrap.com/snippets/social-profile-container-63944396)
 - [For gallery and background](https://codepen.io/sachinchoolur/pen/qNyvGW)
 
-### **Colours**
-- For the colour schema of the site I opted for a dark theme for the header and footer, using (colour) with a contrasting lighter neutral page background colour of (colour). 
+## **Colours**
+The templates utilize a cohesive colour scheme to create a visually appealing interface. The primary background colour is a dark shade, #152836, which provides a solid base. This dark background enhances the readability of the content and contrasts well with the text colour.
 
-### **Typography**
-- I chose (font) for my Navigation menu and Header Title fonts
-- All fonts were sourced through [Google fonts](https://fonts.google.com/).
+The secondary background colour, #333, is also utilized in specific elements, contributing to a consistent design. The primary text colour is #eee, providing a high contrast against the dark background, ensuring readability.
+
+## **Typography**
+
+The primary font used in the templates is "Open Sans," which is a modern and clean typeface. This choice ensures readability and a contemporary look. Additionally, the fallback fonts include "Helvetica Neue," "Helvetica," "Arial," and generic sans-serif fonts. These provide compatibility across various devices.
+
+The font size and weight follow the Bootstrap conventions, with variables defined as --bs-body-font-size and --bs-body-font-weight. This consistency ensures a harmonious look throughout the templates.
+
+The chosen fonts and colour scheme create a simple and modern user interface, making it easy for users to navigate and engage with the content. The templates leverage Bootstrap's well-designed components to create a professional and visually appealing website.
 
 ### **Media**
 - [Balsamiq](https://balsamiq.com/) was used for the design of my wireframes.
