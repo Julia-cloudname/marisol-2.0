@@ -303,6 +303,51 @@ The registration form includes fields for the following information, along with 
 
 In the future, we plan to implement account validation to prevent duplicate accounts. If a user attempts to register with a username or email that already exists, they will be prompted to choose a different username or email to complete the registration process if a user with the same credentials already exists. This enhancement will help ensure unique user accounts on the platform.
 
+<hr>
+
+## **TESTING**
+
+<hr>
+
+## **TECHNOLOGIES USED**
+
+### Languages used:
+
+- HTML
+- CSS3
+- Javascript
+- Python
+
+### Libraries and Programs Used
+
+- [Gitpod](https://www.gitpod.io/)<br>
+   Used for version control alongside GitHub.
+- [GitHub](https://github.com/)<br>
+   Used to store the project and utilise git version control.
+- [Heroku](https://id.heroku.com)<br>
+   Used to deploy project.
+- [Cloudinary](https://cloudinary.com/)<br>
+   Cloud based storage, used for storing any media submitted by users.
+- [ElephantSQL](https://www.elephantsql.com/)<br>
+   Used to host the PostgreSQL database.
+- [W3C - HTML](https://validator.w3.org/)<br>
+   Used to validate all HTML code.
+- [W3C - CSS](https://jigsaw.w3.org/css-validator/)<br>
+   Used to validate all CSS code.
+- [CI PEP8 Testing](https://pep8ci.herokuapp.com/)<br>
+   Used to validate all Python code.
+- [Google Fonts](https://fonts.google.com/)<br>
+   Used to provide the font styling.
+- [Bootstrap](https://getbootstrap.com/)<br>
+   Used to for helping with the HTML design and layout.
+- [Fontawesome](https://fontawesome.com/)<br>
+   Used to implement effective icons.
+- [Google Chrome Dev Tools](https://developer.chrome.com/docs/devtools/)<br>
+   Used during the development to debug and test responsiveness.
+- [Balsamiq](https://balsamiq.com/)<br>
+   Used to build both the database schema diagram and design wireframes.
+  
+
 
 
 
