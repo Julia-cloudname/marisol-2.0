@@ -198,7 +198,7 @@ h1 {
 }
 
 #confirmation {
-  margin-top: 0;
+  margin-top: 40px;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -388,6 +388,7 @@ h6 {
   flex: 0 0 auto;
   width: 83.33333333%;
   color: #eee;
+  margin-bottom: 2%;
 }
 .about {
   max-width: 82%;
