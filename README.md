@@ -34,6 +34,7 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
    * [Booking Form](#booking-form)
    * [Edit Booking Page](#edit-booking-page)
    * [Delete Booking Page](#delete-booking-page)
+   * [Profile Page](#profile-page)
  - [**Testing**](#testing)
  - [**Technologies Used**](#technology-used)
  - [**Deployment**](#deployment)
@@ -259,6 +260,12 @@ Blog is a dynamic collection of insightful articles, with the following features
 - After successful deletion, the user is redirected to the success page with the message: "Call Booking Successfully Deleted!"
 
 ![Delete Success page](docs/read-me/footer.png)
+
+### **Profile Page**
+
+- Registered users have access to the profile page from the navigation menu.
+- On this page, the user can see their latest booking, including the details gathered from the booking form: name, email, phone number, call details message, date, and time.
+- Below the booking details, there are buttons for "Edit Booking" and "Delete Booking." These buttons allow the user to manage their bookings directly from their profile.
 
 
 
