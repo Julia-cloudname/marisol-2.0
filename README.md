@@ -190,7 +190,8 @@ This mobile navigation approach allows users to navigate the site efficiently on
 
 - Positioned at the bottom of each page, the footer of the Marisol Furniture Website is dedicated to connecting with our audience on various social media platforms.
 - While currently featuring placeholders for social media icons, I will add direct links to official profiles across popular networks such as YouTube, Facebook, Twitter, and Instagram in later versions.
-![Footer](docs/read-me/footer.png)
+
+<img src="https://github.com/Julia-cloudname/marisol/blob/7f324bfa42ba5482ae48067273a1312c29e67b38/static/images/footer.png">
 
 ### **Home Page**
 The Home Page of the website features the following sections:
@@ -202,7 +203,7 @@ The Home Page of the website features the following sections:
 - Gallery: A visual gallery showcasing images of custom furniture pieces, helping users see the quality of company work.
 - Footer: Located at the bottom of the page, the footer includes links to social media platforms (YouTube, Facebook, Twitter, and Instagram).
 
-![Home page](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/7f324bfa42ba5482ae48067273a1312c29e67b38/static/images/home-page.png">
 
 ### **Gallery**
 
@@ -211,13 +212,13 @@ The Gallery is a collection of 4 photos, each showcasing a ready furniture proje
 - Thumbnail Preview: On the main Gallery page, users see a grid of thumbnail images representing each furniture project. These thumbnails provide a quick glance at the projects.
 -  Click-to-Enlarge: When a user clicks on a thumbnail, the image opens in a larger view. This allows users to appreciate the details of the project and get a closer look at the craftsmanship.
 
-![Gallery](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/7f324bfa42ba5482ae48067273a1312c29e67b38/static/images/home-page-gallery.png">
 
 -  Project Description: Below each enlarged image, there is a brief description of the project. This description provides insight into the design, materials used, and any special features that make the project unique.
 -  Easy Navigation: While viewing an enlarged image, users can navigate between the images using arrow buttons. This allows users to seamlessly move through the entire collection without leaving the fullscreen view.
 -  Flexible Interaction: Users have the option to exit the fullscreen view at any time. They can click on the "X" button to close it
 
-![Gallery Full Screen](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/7f324bfa42ba5482ae48067273a1312c29e67b38/static/images/gallery-full-screen.png">
 
 The Gallery is designed to showcase the quality and creativity of work, giving users a chance to appreciate the details and learn about the craftsmanship behind each piece of custom furniture.
 
