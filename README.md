@@ -142,13 +142,7 @@ Wireframes for each page are linked here:
 
 [Home Page](link)
 
-[Profile](link)
-
-[Booking](link)
-
-[Signup Page](link)
-
-[Login Page](link)
+[Booking Page](link)
 
 ### **Database Schema**
 ![Database Schema](link)
@@ -163,11 +157,15 @@ Wireframes for each page are linked here:
 
 - The navigation menu on the Marisol Furniture Website is designed for easy access to key sections. It offers links to the 'Home', 'Blog', and 'Gallery' pages, providing a clear pathway for users to explore the primary content areas.
 - Registered users are provided with additional options in the menu. They'll find a link to their 'Profile Page' for managing their account details. If the user is already logged in, the menu includes a 'Log Out' button, allowing them to securely sign out from their accounts.
+
+![Registed](docs/read-me/desktop-nav.png)
+ 
 - If a user is not logged in, the navigation menu will feature a link to the 'Registration Page', encouraging new users to create accounts or log in to access more features of the site.
+
+![Not registed](docs/read-me/desktop-nav.png)
+
 - The navigation bar is designed with responsiveness in mind, adapting seamlessly to various screen sizes. On smaller devices, it collapses into a convenient burger menu, ensuring an optimal browsing experience across devices.
-
-![Desktop Nav](docs/read-me/desktop-nav.png)
-
+- 
 This feature enhances the user experience by providing easy navigation to essential sections of the Marisol Furniture Website and enabling registered users to manage their accounts efficiently.
 
 
@@ -195,7 +193,8 @@ The Home Page of the website features the following sections:
 - Blog Articles: A collection of articles from blog, providing insights, tips, and news related to furniture and design.
 - Gallery: A visual gallery showcasing images of custom furniture pieces, helping users see the quality of company work.
 - Footer: Located at the bottom of the page, the footer includes links to social media platforms (YouTube, Facebook, Twitter, and Instagram).
-![Home](docs/read-me/footer.png)
+
+![Home page](docs/read-me/footer.png)
 
 ### **Gallery**
 
@@ -203,11 +202,14 @@ The Gallery is a collection of 4 photos, each showcasing a ready furniture proje
 
 - Thumbnail Preview: On the main Gallery page, users see a grid of thumbnail images representing each furniture project. These thumbnails provide a quick glance at the projects.
 -  Click-to-Enlarge: When a user clicks on a thumbnail, the image opens in a larger view. This allows users to appreciate the details of the project and get a closer look at the craftsmanship.
+
+![Gallery](docs/read-me/footer.png)
+
 -  Project Description: Below each enlarged image, there is a brief description of the project. This description provides insight into the design, materials used, and any special features that make the project unique.
 -  Easy Navigation: While viewing an enlarged image, users can navigate between the images using arrow buttons. This allows users to seamlessly move through the entire collection without leaving the fullscreen view.
 -  Flexible Interaction: Users have the option to exit the fullscreen view at any time. They can click on the "X" button to close it
 
-![Gallery](docs/read-me/footer.png)
+![Gallery Full Screen](docs/read-me/footer.png)
 
 The Gallery is designed to showcase the quality and creativity of work, giving users a chance to appreciate the details and learn about the craftsmanship behind each piece of custom furniture.
 
@@ -253,19 +255,24 @@ Blog is a dynamic collection of insightful articles, with the following features
 - If the user is logged in, they see the booking form.
 - If not, they see a message prompting them to log in or register.
 
-![Gallery](docs/read-me/footer.png)
+![Not registered booking page](docs/read-me/footer.png)
 
 ### **Booking Form:**
 
 - The user sees a booking form where they can provide the name, email, and phone number of the person who needs the consultation. This feature is designed for users who want to book a call for themselves, their close ones or friends.
-- The form includes a message field where users can specify the details of the call - their specific interests, pricing, materials, or other questions. This allows the specialist to prepare for the call and provide comprehensive information.
-- Users can select a convenient date using a datepicker calendar and a suitable time interval from a dropdown list.
 
 ![Booking form](docs/read-me/footer.png)
 
+- The form includes a message field where users can specify the details of the call - their specific interests, pricing, materials, or other questions. This allows the specialist to prepare for the call and provide comprehensive information.
+- Users can select a convenient date using a datepicker calendar and a suitable time interval from a dropdown list.
+
+![Datepicker](docs/read-me/footer.png)
+
+![Timepicker](docs/read-me/footer.png)
+
 - If the user selects a past or today's date, a message appears in red: "The call date cannot be in the past or today!"
 
-![Message](docs/read-me/footer.png)
+![Not valid date booking](docs/read-me/footer.png)
 
 - After clicking the submit button, the user is taken to a page confirming the successful booking. Below the confirmation message, there are buttons to edit or delete the booking.
 
@@ -312,12 +319,20 @@ Blog is a dynamic collection of insightful articles, with the following features
 
 If the user is not registered, they can access the "Signup" button from the navigation menu, which leads them to a welcome message and the registration form.
 
+![Register Form](docs/read-me/footer.png)
+
 The registration form includes fields for the following information, along with helpful prompts:
 - Username: (Username)
 - E-mail (optional): (E-mail address)
 - Password: (Password)
 - Password (again): (Password)
 - The form also includes a registration confirmation button.
+
+### **Log in/Log out Page**
+
+Users, who have an account can log in and log out
+
+![Log in page](docs/read-me/footer.png)
 
 ### **Future Additions**
 
