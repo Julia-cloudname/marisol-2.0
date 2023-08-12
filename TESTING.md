@@ -43,10 +43,6 @@ Results from Lighthouse testing:
 * Desktop
 <img src="https://github.com/Julia-cloudname/marisol/blob/0fcc065d53d2e4198951c63742f6f6a2e6fbce33/static/images/lighthouse-desktop.png"><br>
 
-No errors on Javascript validator [jshint.com](https://jshint.com/):
-
-![Responsice Mockup](assets/images/jshint.webp)
-
 <hr>
 
 ## **Manual testing** 
