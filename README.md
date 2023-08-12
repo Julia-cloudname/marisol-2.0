@@ -138,14 +138,21 @@ The chosen fonts and colour scheme create a simple and modern user interface, ma
 
 ### **Wireframes**
 
-Wireframes for each page are linked here:
+Wireframes for pages are linked here:
 
-[Home Page](link)
+Homepage
 
-[Booking Page](link)
+<img src="https://github.com/Julia-cloudname/marisol/blob/7aa3e04c6791eeee74dae3925339420eb0dd2c72/static/images/home-page-wareframe.png"><br>
+ 
+Booking Page
+
+<img src="https://github.com/Julia-cloudname/marisol/blob/7aa3e04c6791eeee74dae3925339420eb0dd2c72/static/images/booking-page-wareframe.png"><br>
 
 ### **Database Schema**
-![Database Schema](link)
+
+Database Schema
+
+<img src="https://github.com/Julia-cloudname/marisol/blob/7aa3e04c6791eeee74dae3925339420eb0dd2c72/static/images/database-wareframe.png"><br>
 
 <hr>
 
