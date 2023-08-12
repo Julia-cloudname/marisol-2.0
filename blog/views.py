@@ -8,6 +8,7 @@ import datetime
 from django.urls import reverse
 import logging
 
+# Initialize a logger to track events
 logger = logging.getLogger(__name__)
 
 
@@ -83,6 +84,7 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
 
+# Handles booking form rendering and submission
 class BookingView(View):
     booking_form = CallBookingForm()
 
@@ -115,11 +117,13 @@ class BookingView(View):
         )
 
 
+# Renders the success page after a successful action
 class SuccessView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'booking/success_page.html')
 
 
+# Retrieves and displays user's profile data
 class UserProfileView(View):
     def get(self, request, *args, **kwargs):
         try:
@@ -129,6 +133,7 @@ class UserProfileView(View):
         return render(request, 'profile.html', {"last_booking": last_booking})
 
 
+# Handles editing of a booking (requires user login)
 class EditBookingView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         try:
@@ -174,6 +179,7 @@ class EditBookingView(LoginRequiredMixin, View):
         )
 
 
+# Handles deletion of a booking (requires user login)
 class DeleteBookingView(LoginRequiredMixin, View):
     def get(self, request, *args, **kwargs):
         # logger.error("Get")
@@ -195,6 +201,7 @@ class DeleteBookingView(LoginRequiredMixin, View):
         return redirect('success_delete_page')
 
 
+# Renders the success page after a booking is deleted
 class SuccessDeleteView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'booking/success_delete_page.html')
