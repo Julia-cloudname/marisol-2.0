@@ -85,7 +85,7 @@ h1 {
 /* Booking block */
 
 .wrapper {
-  background-image: url(/static/images/main_kitchen.jpeg);
+  background-image: url(/static/images/main_kitchen.webp);
   background-attachment: scroll;
   background-position: 50%;
   background-repeat: no-repeat;
