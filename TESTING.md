@@ -12,13 +12,13 @@
 
 ## **HTML Validation**
 
-* No errors detected when run through the official [W3C HTML Validation Service](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjulia-cloudname.github.io%2FProject_2%2F)
+* No errors detected when run through the official [W3C HTML Validation Service](https://validator.w3.org/)
 
 <hr>
 
 ## **CSS Validation**
 
-* CSS – no errors were found when passing through the official [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjulia-cloudname.github.io%2FProject_2%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+* CSS – no errors were found when passing through the official [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 
 <hr>
 
@@ -26,11 +26,7 @@
 
 All Python code has been run through the [CI PEP8 Testing](https://pep8ci.herokuapp.com/) validator and has returned no errors, results can be viewed below:
 
-#### **blog.py**
-![admin-py](docs/testing/admin-py.png)
-
-#### **marisol.py**
-![admin-py](docs/testing/admin-py.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/013c572a4d3d2d4ba7eabe654e6e76642cb69d95/static/images/python-validator.png"><br>
 
 <hr>
 
