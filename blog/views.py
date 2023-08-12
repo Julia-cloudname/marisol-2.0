@@ -10,6 +10,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
@@ -38,7 +39,7 @@ class PostDetail(View):
                 "comment_form": CommentForm()
             },
         )
-    
+
     def post(self, request, slug, *args, **kwargs):
 
         queryset = Post.objects.filter(status=1)
@@ -70,8 +71,8 @@ class PostDetail(View):
             },
         )
 
+
 class PostLike(View):
-    
     def post(self, request, slug, *args, **kwargs):
         post = get_object_or_404(Post, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
@@ -80,6 +81,7 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 class BookingView(View):
     booking_form = CallBookingForm()
@@ -100,9 +102,9 @@ class BookingView(View):
             call_time = request.POST['call_time']
             booking = booking_form.save(commit=False)
             booking.call_time = call_time
-            booking.user = request.user  
+            booking.user = request.user
             booking.save()
-            return redirect(reverse('success_page')) 
+            return redirect(reverse('success_page'))
 
         return render(
             request,
@@ -112,7 +114,7 @@ class BookingView(View):
             },
         )
 
-    
+
 class SuccessView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'booking/success_page.html')
@@ -180,18 +182,19 @@ class DeleteBookingView(LoginRequiredMixin, View):
         except CallBooking.DoesNotExist:
             last_booking = None
 
-        return render(request,'booking/delete_booking.html')
+        return render(request, 'booking/delete_booking.html')
 
     def post(self, request, *args, **kwargs):
         # logger.error("Post")
         try:
             last_booking = CallBooking.objects.filter(user=request.user).latest('created_on')
-            last_booking.delete()  
+            last_booking.delete()
         except CallBooking.DoesNotExist:
             pass
 
         return redirect('success_delete_page')
 
+
 class SuccessDeleteView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, 'booking/success_delete_page.html') 
+        return render(request, 'booking/success_delete_page.html')
