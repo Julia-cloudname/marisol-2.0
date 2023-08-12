@@ -161,27 +161,32 @@ No errors on Javascript validator [jshint.com](https://jshint.com/):
 - When I click the registration confirmation button it functions correctly.
 
 <hr>
-​
-## **Bugs**
-
-1
-
-* Issue - When the user clicks on the button "New round", creates a new round even if the timer doesn't work and displays 0.
-* Cause -  there is no checking if the timer starts or not
-* Resolution - add if-condition to New round button listener, which returns nothing if the timer doesn't work (the button New round isn't active)
-
-2
-
-* Issue - When the user clicks on the button "New round", rounds start to display from bottom to top and the user doesn't see the value of the last round till scrolls to the bottom
-* Cause -  rounds displayed in reverse order
-* Resolution - change the method of adding rounds to HTML from .append() to prepend(), now user can see the last round on the top of the list
 
 ## **Bugs and Issues**
-- One of the main bugs I encountered during development was my CSS file not being loaded upon deployment, only in the local Gitpod terminal. To remedy this, an application called 'whitenoise' was installed to pull the static files. For future applications I am going to research the cause of this issue.
-- Additionally, an issue is still visible in devtools for a favicon 404 error. Unfortunately, I was unable to remedy this due to time constraints and lack of knowledge.
-![whitenoise](docs/testing/whitenoise.png)
 
-- I ran into a small issue with my delete thread button not working, this was remedied by correctly moving my closing div to fall within the if arguement of the authenticated user.
+#### **Gallery Images Not Enlarging on Click**
 
-- Currently the like button icon style is loaded when users are not logged in. However, once a user is logged in the style for the icon disappears. I have tried to remedy this issue, however due to time constraints with the project hand in I was unable to fix this issue.
+- Description: The gallery images were not enlarging when clicked, as expected from the Bootstrap template. The issue was resolved by replacing the CDN links and specifying the path to the "gallery.js" file.
+
+- Cause: The problem stemmed from the incorrect CDN links and the missing path reference for the "gallery.js" file.
+
+- Resolution: To address this issue, I replaced the faulty CDN links with the correct ones and provided the proper path to the "gallery.js" file. After making these changes, the gallery images started enlarging upon clicking, matching the expected behavior.
+
+
+#### **Missing Close Button in Mobile Gallery**
+
+- Description: On occasion, the close button for closing files disappeared in the gallery when accessed on mobile devices. Unfortunately, due to limited experience and time constraints, I couldn't determine the exact cause of this issue.
+
+- Cause: The cause of the missing close button on mobile devices was not identified due to time and expertise limitations.
+
+- Resolution: As of now, further investigation is needed to pinpoint the root cause and implement a solution to ensure that the close button consistently appears in the mobile gallery view.
+
+
+#### **Issue with Deleting Booking Using "Delete Booking" Button**
+
+- Description: Clicking the "Delete booking" button on the booking page appeared to work as expected, redirecting users to the success page. However, in reality, the booking record was not removed from the user's account. To resolve this issue, I replaced the <a></a> tag with a <form> element using the "POST" method.
+
+- Cause: The issue was related to the use of the <a></a> tag for the "Delete booking" button, which does not send data to the server, leading to the absence of actual record deletion.
+
+- Resolution: To address this problem, I re-implemented the "Delete booking" button by replacing it with a <form> element that uses the "POST" method and includes the necessary parameters for correct deletion. This change ensures that the booking record is successfully deleted from the user's account on the server side. Now, when users click the "Delete booking" button, the record is properly removed, and they receive a confirmation of the deletion.
   
