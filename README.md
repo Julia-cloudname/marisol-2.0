@@ -248,9 +248,7 @@ Blog is a dynamic collection of insightful articles, with the following features
 - If a user is not logged in, the comment form is not accessible. 
 - When a user submits a comment, it doesn't immediately appear on the site but is instead sent for approval by the administrator. The user is notified with a green message "Your comment is awaiting approval." Upon approval by the admin, the comment is published.
 
-![Comment message to user](docs/read-me/footer.png)
-
-<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/comments-likes-article.png">
+<img src="https://github.com/Julia-cloudname/marisol/blob/320942c43e49fada953d075c4e5656b4bc9ba361/static/images/approve-comment.png">
 
 ### **Call Booking**
 
