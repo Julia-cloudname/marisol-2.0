@@ -314,7 +314,7 @@ Blog is a dynamic collection of insightful articles, with the following features
 - On this page, the user can see their latest booking, including the details gathered from the booking form: name, email, phone number, call details message, date, and time.
 - Below the booking details, there are buttons for "Edit Booking" and "Delete Booking." These buttons allow the user to manage their bookings directly from their profile.
 
-![Profile Page](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/c69c22239531ca4c400ca142e072dd434f4d06f6/static/images/profile-page.png">
 
 ### **Administrative Panel**
 
@@ -323,13 +323,13 @@ Blog is a dynamic collection of insightful articles, with the following features
 - In the "Comments" section, the administrator can add, edit, approve, and delete comments.
 - In the "Bookings" section, the administrator can add, edit, and delete bookings from all users. The administrator can also view comprehensive information about all bookings.
 
-![Administrative Panel Bookings](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/c69c22239531ca4c400ca142e072dd434f4d06f6/static/images/admin-page.png">
 
 ### **Signup Page**
 
 If the user is not registered, they can access the "Signup" button from the navigation menu, which leads them to a welcome message and the registration form.
 
-![Register Form](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/c69c22239531ca4c400ca142e072dd434f4d06f6/static/images/sign-up-page.png">
 
 The registration form includes fields for the following information, along with helpful prompts:
 - Username: (Username)
@@ -342,7 +342,7 @@ The registration form includes fields for the following information, along with 
 
 Users, who have an account can log in and log out
 
-![Log in page](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/c69c22239531ca4c400ca142e072dd434f4d06f6/static/images/login-page.png">
 
 ### **Future Additions**
 
