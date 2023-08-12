@@ -326,7 +326,9 @@ The registration form includes fields for the following information, along with 
 
 <hr>
 
-## **TESTING**
+## **Testing**
+
+[TESTING DETAILS](TESTING.md)
 
 <hr>
 
