@@ -165,11 +165,12 @@ Database Schema
 - The navigation menu on the Marisol Furniture Website is designed for easy access to key sections. It offers links to the 'Home', 'Blog', and 'Gallery' pages, providing a clear pathway for users to explore the primary content areas.
 - Registered users are provided with additional options in the menu. They'll find a link to their 'Profile Page' for managing their account details. If the user is already logged in, the menu includes a 'Log Out' button, allowing them to securely sign out from their accounts.
 
-![Registed](docs/read-me/desktop-nav.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/2700e4977aa7dfb8829eca21e5306ed795344f2f/static/images/registed-navbar.png"><br>
+
  
 - If a user is not logged in, the navigation menu will feature a link to the 'Registration Page', encouraging new users to create accounts or log in to access more features of the site.
 
-![Not registed](docs/read-me/desktop-nav.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/2700e4977aa7dfb8829eca21e5306ed795344f2f/static/images/not-registed-navbar.png">
 
 - The navigation bar is designed with responsiveness in mind, adapting seamlessly to various screen sizes. On smaller devices, it collapses into a convenient burger menu, ensuring an optimal browsing experience across devices.
 - 
@@ -181,7 +182,7 @@ This feature enhances the user experience by providing easy navigation to essent
 - The mobile version of the Marisol Furniture Website features a convenient burger menu, ensuring a responsive and user-friendly design for smaller screens.
 - When users tap on the burger icon, a dropdown menu unfolds, providing easy access to the same essential page links as mentioned before. This includes the primary pages, such as 'Home', 'Blog', and 'Gallery', along with the user-specific dropdown menu.
 
-![Mobile Nav](docs/read-me/desktop-nav.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/2700e4977aa7dfb8829eca21e5306ed795344f2f/static/images/mobile-navbar.png">
 
 This mobile navigation approach allows users to navigate the site efficiently on their mobile devices, maintaining consistent access to key sections and user account options through the intuitive dropdown menu.
 
