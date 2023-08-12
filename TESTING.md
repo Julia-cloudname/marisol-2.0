@@ -38,10 +38,10 @@ All Python code has been run through the [CI PEP8 Testing](https://pep8ci.heroku
 Results from Lighthouse testing:
 
 * Mobile 
-![Responsice Mockup](assets/images/lighthouse-mobile.webp)
+<img src="https://github.com/Julia-cloudname/marisol/blob/0fcc065d53d2e4198951c63742f6f6a2e6fbce33/static/images/lighthouse-mobile.png"><br>
 
 * Desktop
-![Responsice Mockup](assets/images/lighthouse-desktop.webp)
+<img src="https://github.com/Julia-cloudname/marisol/blob/0fcc065d53d2e4198951c63742f6f6a2e6fbce33/static/images/lighthouse-desktop.png"><br>
 
 No errors on Javascript validator [jshint.com](https://jshint.com/):
 
