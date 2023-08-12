@@ -57,10 +57,10 @@
         </div>
     </div>
 </div>
-<div>
+<div class="control-button">
     {% if last_booking %}
-<a class="change_booking_button_profile" href="{% url 'edit_booking' %}">Edit Booking</a>
-<a class="delete_booking_button_profile" href="{% url 'delete_booking' %}">Delete booking</a>
+<div id="first_button_profile"><a class="change_booking_button_profile" href="{% url 'edit_booking' %}">Edit Booking</a></div>
+<div id="second_button_profile"><a class="delete_booking_button_profile" href="{% url 'delete_booking' %}">Delete booking</a></div>
 {% endif %}
 </div>
 

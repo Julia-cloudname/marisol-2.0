@@ -66,18 +66,20 @@
     <section class="layout">
         <div class="wrapper">
             <div class="container_description">
-                <h1 class="cover-text">
-                    Custom-made furniture with individual design
-                </h1>
-                <p class="cover-text">
-                    Order a consultation by phone with our specialist at a convenient time and we will call you back
-                </p>
-                <button class="book-call-button" onclick="redirectToBooking()">Book call</button>
+                <div class="banner">
+                    <h1 class="cover-text">
+                        Custom-made furniture with individual design
+                    </h1>
+                    <p class="cover-text">
+                        Order a consultation by phone with our specialist at a convenient time and we will call you back
+                    </p>
+                    <button class="book-call-button" onclick="redirectToBooking()">Book call</button>
                 <script>
                     function redirectToBooking() {
                         window.location.href = "{% url 'booking' %}";
                     }
                 </script>
+                </div>
             </div>
         </div>
     </section>
