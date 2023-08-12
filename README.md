@@ -232,23 +232,25 @@ Blog is a dynamic collection of insightful articles, with the following features
 - As the number of articles exceeds six, a "Next Page" arrow appears, allowing users to explore additional articles.
 - When the user clicks "Next Page," the remaining article thumbnails are displayed, along with a "Back" button to return to the previous set of articles.
 
-![Blog](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/home-page-blog.png">
 
 ### **Article Interaction:**
 
 - Clicking on an article's title takes the user to the full version of the article, where they can read the entire content.
 - The full article view also displays comments made by other users, allowing for discussion and engagement with the content.
 
-![Article](docs/read-me/footer.png)  
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/opened-article.png">
 
 - Registered users have the ability to leave comments in the dedicated comment section below the article.
-
-![Comment form](docs/read-me/footer.png)  
+ 
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/comments-likes-article.png">
 
 - If a user is not logged in, the comment form is not accessible. 
 - When a user submits a comment, it doesn't immediately appear on the site but is instead sent for approval by the administrator. The user is notified with a green message "Your comment is awaiting approval." Upon approval by the admin, the comment is published.
 
 ![Comment message to user](docs/read-me/footer.png)
+
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/comments-likes-article.png">
 
 ### **Call Booking**
 
@@ -257,41 +259,40 @@ Blog is a dynamic collection of insightful articles, with the following features
 - Users can see a call booking block on every page of the website.
 - When the user clicks the "Book Call" button, they are redirected to the booking page.
 
-![Gallery](docs/read-me/footer.png)
-
 ### **Booking Page:**
 
 - If the user is logged in, they see the booking form.
 - If not, they see a message prompting them to log in or register.
 
-![Not registered booking page](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/not-registed-booking.png">
 
 ### **Booking Form:**
 
 - The user sees a booking form where they can provide the name, email, and phone number of the person who needs the consultation. This feature is designed for users who want to book a call for themselves, their close ones or friends.
 
-![Booking form](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/registed-booking-page.png">
 
 - The form includes a message field where users can specify the details of the call - their specific interests, pricing, materials, or other questions. This allows the specialist to prepare for the call and provide comprehensive information.
 - Users can select a convenient date using a datepicker calendar and a suitable time interval from a dropdown list.
 
-![Datepicker](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/datepicker-booking-page.png">
 
-![Timepicker](docs/read-me/footer.png)
+
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/timepicker-booking-page.png">
 
 - If the user selects a past or today's date, a message appears in red: "The call date cannot be in the past or today!"
 
-![Not valid date booking](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/not-valid-date-booking.png">
 
 - After clicking the submit button, the user is taken to a page confirming the successful booking. Below the confirmation message, there are buttons to edit or delete the booking.
 
-![Success](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/success-booking-page.png">
 
 ### **Edit Booking Page:**
 
 - When the user clicks the "Edit Booking" button, they are taken to the editing page, where a pre-filled booking form is automatically loaded with the details of their last booking.
 
-![Success page](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/edit-booking-form.png">
 
 - The user can make any necessary changes to the booking information and then save the updates. Upon saving, they are redirected to the success page.
 - On the success page, the user receives a confirmation message about the successful changes to the booking, along with two buttons: "Edit Booking" and "Delete Booking."
@@ -300,12 +301,12 @@ Blog is a dynamic collection of insightful articles, with the following features
 
 - When the user clicks the "Delete Booking" button, they are taken to the deletion page, where they see a warning message: "Are you sure you want to delete this booking?" Below the message, there are two buttons: "Edit Booking" and "Delete Booking."
 
-![Delete Booking](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/delete-booking-confirm.png">
 
 - If the user confirms the deletion by clicking the "Delete Booking" button, the booking is permanently removed from the user's account and from the administrator panel.
 - After successful deletion, the user is redirected to the success page with the message: "Call Booking Successfully Deleted!"
 
-![Delete Success page](docs/read-me/footer.png)
+<img src="https://github.com/Julia-cloudname/marisol/blob/bd47e5e9c8c9d94e0231f6cbf9b3a882234224b5/static/images/success-delete-page.png">
 
 ### **Profile Page**
 
