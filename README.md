@@ -4,7 +4,7 @@ The Marisol Furniture website serves as a portfolio and blog platform designed f
 
 [Marisol](https://marisol-801c526b3523.herokuapp.com/) - The live site can be viewed here.
 
-![Am I Responsive?](link)
+![Am I Responsive?](static/images/responsive.png)
 
 <hr>
 
