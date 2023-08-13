@@ -85,7 +85,7 @@ h1 {
 /* Booking block */
 
 .wrapper {
-  background-image: url(/static/images/main_kitchen.webp);
+  background-image: url(https://res.cloudinary.com/dc3kpq6mq/image/upload/v1691913039/static/images/main_kitchen.bf392569132a.webp);
   background-attachment: scroll;
   background-position: 50%;
   background-repeat: no-repeat;
