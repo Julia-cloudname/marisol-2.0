@@ -115,6 +115,8 @@ I used templates:
 - [For website structure](https://getbootstrap.com/docs/4.3/examples/jumbotron/)
 - [For profile page](https://bbbootstrap.com/snippets/social-profile-container-63944396)
 - [For gallery and background](https://codepen.io/sachinchoolur/pen/qNyvGW)
+- When creating the site design, I was inspired by this site https://formahome.ie
+
 
 ## **Colours**
 
