@@ -33,7 +33,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['8000-juliacloudname-marisol-veb4f6i9n1p.ws-eu102.gitpod.io', '8000-juliacloudname-marisol-veb4f6i9n1p.ws-eu103.gitpod.io', 'marisol-801c526b3523.herokuapp.com']
+ALLOWED_HOSTS = ['https://8000-juliacloudnam-marisol20-xeakagh4u17.ws-eu106.gitpod.io/', '8000-juliacloudnam-marisol20-xeakagh4u17.ws-eu106.gitpod.io', 'marisol-v2-ce3ee66e3e0f.herokuapp.com/']
 
 # Application definition
 
