@@ -5,17 +5,17 @@
 <div class="row">
     <div class="col-lg-8 col-md-10-booking mx-auto">
         {% if user.is_authenticated %}
-        <p>Select a suitable date and time, and we'll contact you shortly.</p>
+        <p>Виберіть зручну дату та час, і ми скоро зв'яжемося з вами.</p>
         <form method="post">
             {% csrf_token %}
             {{ booking_form.as_p }}
             <form method="post" action="{% url 'success_page' %}">
                 {% csrf_token %}
-                <button type="submit" class="edit_booking_button">Submit booking</button>
+                <button type="submit" class="edit_booking_button">Підтвердити бронювання</button>
             </form>
         </form>
         {% else %}
-        <p>Please, log in to book a call, or register on the website if you don't have an account yet </p>
+        <p>Будь ласка, увійдіть у систему, щоб забронювати дзвінок, або зареєструйтеся на сайті, якщо у вас ще немає акаунту</p>
         {% endif %}
     </div>
 </div>

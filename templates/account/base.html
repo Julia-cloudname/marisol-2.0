@@ -10,7 +10,7 @@
 
     {% if messages %}
     <div>
-      <strong>Messages:</strong>
+      <strong>Повідомлення:</strong>
       <ul>
         {% for message in messages %}
         <li>{{message}}</li>
@@ -20,14 +20,14 @@
     {% endif %}
 
     <div>
-      <strong>Menu:</strong>
+      <strong>Меню:</strong>
       <ul>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+        <li><a href="{% url 'account_email' %}">Змінити E-mail</a></li>
+        <li><a href="{% url 'account_logout' %}">Вийти</a></li>
         {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'account_login' %}">Увійти</a></li>
+        <li><a href="{% url 'account_signup' %}">Зареєструватися</a></li>
         {% endif %}
       </ul>
     </div>

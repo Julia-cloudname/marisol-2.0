@@ -14,28 +14,32 @@ class TimeInput(forms.TimeInput):
 
 def get_time_intervals():
     return [
-        ('09:00', '9:00 AM - 10:00 AM'),
-        ('10:00', '10:00 AM - 11:00 AM'),
-        ('11:00', '11:00 AM - 12:00 PM'),
-        ('12:00', '12:00 AM - 1:00 PM'), 
-        ('1:00', '1:00 PM - 2:00 PM'),
-        ('2:00', '2:00 PM - 3:00 PM'),
-        ('3:00', '3:00 PM - 4:00 PM'),
-        ('4:00', '4:00 PM - 5:00 PM'),
-        ('5:00', '5:00 PM - 6:00 PM'),
-        ('6:00', '6:00 PM - 7:00 PM'),
-        ('7:00', '7:00 PM - 8:00 PM'),
+        ('09:00', '9:00 - 10:00'),
+        ('10:00', '10:00 - 11:00'),
+        ('11:00', '11:00 - 12:00'),
+        ('12:00', '12:00 - 13:00'), 
+        ('1:00', '13:00 - 14:00'),
+        ('2:00', '14:00 - 15:00'),
+        ('3:00', '15:00 - 16:00'),
+        ('4:00', '16:00 - 17:00'),
+        ('5:00', '17:00 - 18:00'),
+        ('6:00', '18:00 - 19:00'),
+        ('7:00', '19:00 - 20:00'),
     ]
 
 # Form for creating or updating CallBooking instances.
 class CallBookingForm(forms.ModelForm):
-    call_time = forms.ChoiceField(choices=get_time_intervals, label='Select time')
+    client_name = forms.CharField(label='Ім\'я клієнта')
+    client_email = forms.EmailField(label='Електронна пошта клієнта')
+    phone_number = forms.CharField(label='Номер телефону')
+    details = forms.CharField(label='Деталі', widget=forms.Textarea)
+    call_date = forms.DateField(label='Дата', widget=DateInput())
+    call_time = forms.ChoiceField(choices=get_time_intervals(), label='Оберіть час')
 
     class Meta:
         model = CallBooking
         fields = ['client_name', 'client_email', 'phone_number', 'details', 'call_date', 'call_time']
         widgets = {
-            'call_date': DateInput(),
             'call_time': TimeInput(),
         }
 
@@ -47,8 +51,9 @@ class CallBookingForm(forms.ModelForm):
     def clean_call_date(self):
         call_date = self.cleaned_data['call_date']
         if call_date <= date.today():
-            raise ValidationError('The call date cannot be in the past or today!')
+            raise ValidationError('Дата дзвінка не може бути ні минулою, ні сьогоднішньою')
         return call_date
+
 
 class CommentForm(forms.ModelForm):
     class Meta:

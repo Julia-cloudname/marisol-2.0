@@ -5,11 +5,11 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-            <p id="confirmation">Are you sure you want to delete booking?</p>
-            <span id="first_button"><a class="change_booking_button" href="{% url 'edit_booking' %}">Edit Booking</a></span>
+            <p id="confirmation">Ви впевнені, що хочете видалити бронювання?</p>
+            <span id="first_button"><a class="change_booking_button" href="{% url 'edit_booking' %}">Редагувати</a></span>
             <form method="post" action="{% url 'delete_booking' %}">
                 {% csrf_token %}
-                <button type="submit" class="delete_booking_button">Delete Booking</button>
+                <button type="submit" class="delete_booking_button">Видалити</button>
             </form>
         </div>
     </div>

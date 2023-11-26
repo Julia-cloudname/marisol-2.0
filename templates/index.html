@@ -9,34 +9,34 @@
     <div class="about">
       <div class="cont">
         <div id="about-us-title">
-          <h1>About Us:</h1>
-          <p>Welcome to MARISOL company! We have been in the furniture industry for over 5 years and are based in the
-            beautiful ukrainian city of Khmelnytskyi. We specialize in creating custom-made kitchen cabinets, wardrobes,
-            living room furniture, and children's furniture. Our expertise lies in manufacturing all types of
-            bespoke furniture, tailored to meet the unique needs and preferences of each of our clients.</p>
+          <h1>Про нас:</h1>
+          <p>Ласкаво просимо до компанії MARISOL! Ми працюємо у меблевій індустрії більше 5 років і базуємося в
+            прекрасному українському місті Хмельницький. Ми спеціалізуємося на створенні на замовлення кухонних шаф,
+            шаф-купе, меблів для вітальні та дитячих меблів. Наша експертиза полягає у виготовленні всіх типів
+            індивідуальних меблів, які відповідають унікальним потребам та перевагам кожного з наших клієнтів.</p>
 
-          <h1>Why Choose Us:</h1>
+          <h1>Чому обирають нас:</h1>
           <ul>
-            <li>Quick Turnaround: We take pride in our efficient production process, ensuring that your furniture is
-              ready in no time.</li>
-            <li>Extensive Experience: With years of experience, we have honed our skills to deliver the highest
-              quality furniture.</li>
-            <li>Guarantee: We stand by the quality of our work and offer a solid guarantee for all our products.
-            </li>
-            <li>Competitive Pricing: We believe in offering the best value for your investment, making our prices
-              pleasant surprises.</li>
-            <li>Modern Materials: We keep ourselves updated with the latest trends and utilize modern materials for
-              exceptional results.</li>
+            <li>Швидке виготовлення: Ми пишаємося нашим ефективним процесом виробництва, завдяки якому ваші меблі будуть
+              готові в найкоротші терміни.</li>
+            <li>Великий досвід: Завдяки багаторічному досвіду ми вдосконалили наші навички, щоб забезпечити меблі
+              найвищої якості.</li>
+            <li>Гарантія: Ми підтримуємо якість нашої роботи та пропонуємо міцну гарантію на всі наші продукти.</li>
+            <li>Конкурентні ціни: Ми віримо в те, що пропонуємо найкращу цінність за ваші інвестиції, тому наші ціни
+              приємно здивують вас.</li>
+            <li>Сучасні матеріали: Ми стежимо за останніми трендами та використовуємо сучасні матеріали для виняткових
+              результатів.</li>
           </ul>
 
-          <h2>Custom Kitchen Solutions:</h2>
-          <p>For those seeking tailor-made kitchen furniture, we've got you covered. Our designs span from classic
-            to modern styles, and we offer swift manufacturing, contemporary designs, and high-quality materials.
-            With our 3-D modeling, you can visualize your dream kitchen before it becomes a reality.</p>
-          <p>Whether it's custom-built cabinets, wardrobes, living room furniture, or kitchens, we guarantee you an
-            individualized approach, premium craftsmanship, and furniture that will elevate your living spaces.
-            Experience the convenience and elegance of personalized furniture that suits your taste and lifestyle.
-            Contact us today for your furniture needs!</p>
+          <h2>Індивідуальні рішення для кухонь:</h2>
+          <p>Для тих, хто шукає меблі для кухні на замовлення, ми готові допомогти. Наші дизайни варіюються від
+            класичних до сучасних стилів, і ми пропонуємо швидке виробництво, сучасний дизайн та матеріали високої
+            якості. За допомогою нашого 3D-моделювання ви можете візуалізувати свою мрію про кухню, перш ніж вона стане
+            реальністю.</p>
+          <p>Незалежно від того, чи йдеться про шафи на замовлення, шафи-купе, меблі для вітальні чи кухні, ми
+            гарантуємо вам індивідуальний підхід, вишукане майстерність і меблі, які піднімуть ваші житлові простори на
+            новий рівень. Відчуйте зручність та елегантність персоналізованих меблів, які відповідають вашому смаку та
+            способу життя. Звертайтеся до нас сьогодні за вашими меблевими потребами!</p>
 
         </div>
       </div>
@@ -44,7 +44,7 @@
 
     <!-- Blog Entries Column -->
     <div class="col-12 mt-3 left">
-      <h2 id="blog-title">BLOG</h2>
+      <h2 id="blog-title">БЛОГ</h2>
       <div class="row">
         {% for post in post_list %}
         <div class="col-md-4">
@@ -57,7 +57,7 @@
                 <img class="card-img-top" src=" {{ post.featured_image.url }}">
                 {% endif %}
                 <div class="image-flash">
-                  <p class="author">Author: {{ post.author }}</p>
+                  <p class="author">Автор: {{ post.author }}</p>
                 </div>
               </div>
               <a href="{% url 'post_detail' post.slug %}" class="post-link">
@@ -83,10 +83,10 @@
   <nav aria-label="Page navigation">
     <ul class="pagination justify-content-center">
       {% if page_obj.has_previous %}
-      <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+      <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; ПОПЕРЕДНЯ </a></li>
       {% endif %}
       {% if page_obj.has_next %}
-      <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+      <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> НАСТУПНА &raquo;</a></li>
 
       {% endif %}
     </ul>
@@ -96,62 +96,58 @@
 <!-- Gallery -->
 <div class="cont">
   <div class="page-head">
-    <h1>Gallery</h1>
-    <p id="lead">Our previous works</p>
+    <h1>ГАЛЕРЕЯ</h1>
+    <p id="lead">Наші попередні роботи</p>
   </div>
 
   <div class="demo-gallery">
     <ul id="lightgallery">
       <li
-            data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
-            data-src="{% static 'images/1-1600.webp' %}"
-            data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>"
-        >
-            <a href="">
-                <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
-                <div class="demo-gallery-poster">
-                    <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-                </div>
-            </a>
-        </li>
-        <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
         data-responsive="{% static 'images/2-375.webp' %} 375, {% static 'images/2-480.webp' %} 480, {% static 'images/2-800.webp' %} 800"
         data-src="{% static 'images/2-1600.webp' %}"
-        data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>"
-    >
+        data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>">
         <a href="">
-            <img class="img-responsive" src="{% static 'images/thumb-2.webp' %}">
-            <div class="demo-gallery-poster">
-                <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-            </div>
-        </a>
-    </li>
-    <li
-    data-responsive="{% static 'images/3-375.webp' %} 375, {% static 'images/3-480.webp' %} 480, {% static 'images/3-800.webp' %} 800"
-    data-src="{% static 'images/3-1600.webp' %}"
-    data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>"
->
-    <a href="">
-        <img class="img-responsive" src="{% static 'images/thumb-3.webp' %}">
-        <div class="demo-gallery-poster">
+          <img class="img-responsive" src="{% static 'images/thumb-2.webp' %}">
+          <div class="demo-gallery-poster">
             <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-        </div>
-    </a>
-</li>
-<li
-data-responsive="{% static 'images/6-375.webp' %} 375, {% static 'images/6-480.webp' %} 480, {% static 'images/6-800.webp' %} 800"
-data-src="{% static 'images/6-1600.webp' %}"
-data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>"
->
-<a href="">
-    <img class="img-responsive" src="{% static 'images/thumb-6.webp' %}">
-    <div class="demo-gallery-poster">
-        <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
-    </div>
-</a>
-</li>
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/3-375.webp' %} 375, {% static 'images/3-480.webp' %} 480, {% static 'images/3-800.webp' %} 800"
+        data-src="{% static 'images/3-1600.webp' %}"
+        data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-3.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/6-375.webp' %} 375, {% static 'images/6-480.webp' %} 480, {% static 'images/6-800.webp' %} 800"
+        data-src="{% static 'images/6-1600.webp' %}"
+        data-sub-html="<h4>Handleless kitchen</h4><p>Modern handleless kitchen design with sleek, seamless surfaces.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-6.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
     </ul>
-    <span class="small">Click on any of the images to see full-screen photo</span>
+    <span class="small">Клацніть на будь-яке зображення, щоб розкрити його на повний екран</span>
   </div>
 </div>
 

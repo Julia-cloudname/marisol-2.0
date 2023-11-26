@@ -33,7 +33,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ['https://8000-juliacloudnam-marisol20-xeakagh4u17.ws-eu106.gitpod.io/', '8000-juliacloudnam-marisol20-xeakagh4u17.ws-eu106.gitpod.io', 'marisol-v2-ce3ee66e3e0f.herokuapp.com']
+ALLOWED_HOSTS = ['8000-juliacloudnam-marisol20-b6cn4zay5v4.ws-eu106.gitpod.io', 'marisol-v2-ce3ee66e3e0f.herokuapp.com']
 
 # Application definition
 
@@ -132,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uk'
 
 TIME_ZONE = 'UTC'
 

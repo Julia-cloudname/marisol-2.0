@@ -10,7 +10,7 @@
                         <div class="card-block text-center text-white">
                             <div class="m-b-25">
                                 <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius"
-                                    alt="User-Profile-Image">
+                                    alt="Зображення профілю користувача">
                             </div>
                             <h6 class="f-w-600">{{ user.username }}</h6>
                             <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
@@ -18,37 +18,37 @@
                     </div>
                     <div class="col-sm-8">
                         <div class="card-block">
-                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
+                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Інформація</h6>
                             <div class="row">
                                 <div class="col-sm-6">
-                                    <p class="m-b-10 f-w-600">Name</p>
+                                    <p class="m-b-10 f-w-600">Ім'я</p>
                                     <h6 class="text-muted f-w-400">{{ user.username }}</h6>
                                 </div>
                                 <div class="col-sm-6">
-                                    <p class="m-b-10 f-w-600">Email</p>
+                                    <p class="m-b-10 f-w-600">Електронна пошта</p>
                                     <h6 class="text-muted f-w-400">{{ user.email }}</h6>
                                 </div>
                             </div>
                         </div>
                         <div class="card-block">
                             {% if last_booking %}
-                            <h6 class="m-b-10 f-w-600">Last booked call</h6>
+                            <h6 class="m-b-10 f-w-600">Останній заброньований дзвінок</h6>
                             <div class="col-sm-6">
-                                <p class="m-b-10 f-w-600">Client name</p>
+                                <p class="m-b-10 f-w-600">Ім'я клієнта</p>
                                 <h6 class="text-muted f-w-400">{{ last_booking.client_name }}</h6>
-                                <p class="m-b-10 f-w-600">Client phone</p>
+                                <p class="m-b-10 f-w-600">Телефон клієнта</p>
                                 <h6 class="text-muted f-w-400">{{ last_booking.phone_number }}</h6>
-                                <p class="m-b-10 f-w-600">Client email</p>
+                                <p class="m-b-10 f-w-600">Електронна пошта клієнта</p>
                                 <h6 class="text-muted f-w-400">{{ last_booking.client_email }}</h6>
-                                <p class="m-b-10 f-w-600">Call date</p>
+                                <p class="m-b-10 f-w-600">Дата дзвінка</p>
                                 <h6 class="text-muted f-w-400">{{ last_booking.call_date }}</h6>
-                                <p class="m-b-10 f-w-600">Call time</p>
+                                <p class="m-b-10 f-w-600">Час дзвінка</p>
                                 <h6 class="text-muted f-w-400">{{ last_booking.call_time }}</h6>
-                                <p class="m-b-10 f-w-600">Details</p>
+                                <p class="m-b-10 f-w-600">Деталі</p>
                                 <h6 class="text-muted f-w-400">{{ last_booking.details }}</h6>
                             </div>
                             {% else %}
-                            <h6 class="text-muted f-w-400">You don't have booked calls</h6>
+                            <h6 class="text-muted f-w-400">У вас немає заброньованих дзвінків</h6>
                             {% endif %}
                         </div>
                     </div>
@@ -59,8 +59,8 @@
 </div>
 <div class="control-button">
     {% if last_booking %}
-<div id="first_button_profile"><a class="change_booking_button_profile" href="{% url 'edit_booking' %}">Edit Booking</a></div>
-<div id="second_button_profile"><a class="delete_booking_button_profile" href="{% url 'delete_booking' %}">Delete booking</a></div>
+<div id="first_button_profile"><a class="change_booking_button_profile" href="{% url 'edit_booking' %}">Редагувати</a></div>
+<div id="second_button_profile"><a class="delete_booking_button_profile" href="{% url 'delete_booking' %}">Видалити бронювання</a></div>
 {% endif %}
 </div>
 
