@@ -8,7 +8,6 @@ import datetime
 from django.urls import reverse
 import logging
 
-
 # Initialize a logger to track events
 logger = logging.getLogger(__name__)
 
@@ -17,7 +16,7 @@ class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
     template_name = "index.html"
-    paginate_by = 6
+    paginate_by = 4
 
 
 class PostDetail(View):
