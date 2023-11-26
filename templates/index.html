@@ -4,6 +4,30 @@
 
 {% block content %}
 
+<!-- Call Booking Block -->
+<section class="layout">
+  <div class="wrapper">
+    <div class="container_description">
+      <div class="banner">
+        <h1 class="cover-text">
+          Меблі на замовлення з індивідуальним дизайном
+        </h1>
+        <p class="cover-text">
+          Замовте консультацію по телефону у нашого спеціаліста у зручний для вас час, і ми вам зателефонуємо вам, щоб відповісти на всі питання щодо матеріалів, дизайну, цін тощо
+        </p>
+        <button class="book-call-button" onclick="redirectToBooking()">Забронювати консультацію</button>
+        <script>
+          function redirectToBooking() {
+            window.location.href = "{% url 'booking' %}";
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Call Booking Block -->
+
+<!-- About us Block -->
 <div class="container-fluid">
   <div class="row">
     <div class="about">
@@ -41,6 +65,7 @@
         </div>
       </div>
     </div>
+  <!-- End Call Booking Block -->
 
     <!-- Blog Entries Column -->
     <div class="col-12 mt-3 left">
@@ -141,6 +166,116 @@
         data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
         <a href="">
           <img class="img-responsive" src="{% static 'images/thumb-6.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+      data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+      data-src="{% static 'images/1-1600.webp' %}"
+      data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+      <a href="">
+        <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+        <div class="demo-gallery-poster">
+          <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+        </div>
+      </a>
+    </li>
+    <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
+          <div class="demo-gallery-poster">
+            <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
+          </div>
+        </a>
+      </li>
+      <li
+        data-responsive="{% static 'images/1-375.webp' %} 375, {% static 'images/1-480.webp' %} 480, {% static 'images/1-800.webp' %} 800"
+        data-src="{% static 'images/1-1600.webp' %}"
+        data-sub-html="<h4>Кухня без ручок</h4><p>Сучасний дизайн кухні без ручок з гладкими, безшовними поверхнями.</p>">
+        <a href="">
+          <img class="img-responsive" src="{% static 'images/thumb-1.webp' %}">
           <div class="demo-gallery-poster">
             <img src="https://sachinchoolur.github.io/lightgallery.js/static/img/zoom.png">
           </div>
