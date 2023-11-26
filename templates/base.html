@@ -37,33 +37,33 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">ГОЛОВНА</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Головна</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#about-us-title">ПРО НАС</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#about-us-title">Про нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#blog-title">БЛОГ</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#blog-title">Блог</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#lead">ГАЛЕРЕЯ</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#lead">Галерея</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'contacts' %}">КОНТАКТИ</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'contacts' %}">Контакти</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'profile' %}">ПРОФіЛЬ</a>
+                        <a class="nav-link" href="{% url 'profile' %}">Профіль</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">ВИЙТИ</a>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Вийти</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">ЗАРЕЄСТРУВАТИСЬ</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}">Зареєструватись</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">УВІЙТИ</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Увійти</a>
                     </li>
                     {% endif %}
                 </ul>
