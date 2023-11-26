@@ -40,13 +40,13 @@
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">ГОЛОВНА</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#about-us-title">ПРО НАС</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#about-us-title">ПРО НАС</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#blog-title">БЛОГ</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#blog-title">БЛОГ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#lead">ГАЛЕРЕЯ</a>
+                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}#lead">ГАЛЕРЕЯ</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
