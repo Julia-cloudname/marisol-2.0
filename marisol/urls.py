@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path, include
 from blog.views import PostList, PostDetail, PostLike, BookingView, SuccessView, UserProfileView, EditBookingView, DeleteBookingView, SuccessDeleteView
 from allauth.account.views import LogoutView
+from blog.views import ContactView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -17,4 +18,5 @@ urlpatterns = [
     path('edit_booking/', EditBookingView.as_view(), name='edit_booking'),
     path('delete_booking/', DeleteBookingView.as_view(), name='delete_booking'),
     path('success_delete_page/', SuccessDeleteView.as_view(), name='success_delete_page'),
+    path('contacts/', ContactView.as_view(), name='contacts'),
 ]

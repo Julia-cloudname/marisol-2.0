@@ -8,6 +8,7 @@ import datetime
 from django.urls import reverse
 import logging
 
+
 # Initialize a logger to track events
 logger = logging.getLogger(__name__)
 
@@ -205,3 +206,10 @@ class DeleteBookingView(LoginRequiredMixin, View):
 class SuccessDeleteView(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'booking/success_delete_page.html')
+
+# Renders the contact page
+class ContactView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'contacts.html')
+
+ 
